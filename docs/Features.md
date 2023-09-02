@@ -43,3 +43,32 @@
 - USB connector
 - USB to serial interface chip
 - Debug LEDs
+
+# Algorithms
+
+## Pathfinding
+
+- Maze generation should be pseudorandom
+	- Floating ADC pin?
+	- Linear feedback shift register?
+
+1. BFS
+2. DFS
+3. Dijkstra's
+4. A*
+5. Greedy best-first search
+
+## Sorting
+
+1. Selection sort
+2. Insertion sort
+3. Bubble sort
+4. Quick sort
+5. Merge sort
+6. Heap sort
+
+## Search
+
+1. Sequential
+2. Binary
+3. Interpolation
