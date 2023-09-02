@@ -11,10 +11,16 @@
 # Power
 
 - Batteries
+	- How am I going to get the required voltage to drive my display? A boost converter can only do so much—especially if I require high current draw
 - Voltage regulator(s) for supply rails
 - Boost converter for LEDs?
 - Battery voltage sensing
 - Power LED
+- Auto-shutdown circuit
+	- MOSFET power switch circuit
+	- Can this be done with a latch instead?
+		- Latch on button press, use micro to write reset—this might actually be more reliable?
+		- How would the latch be powered when the circuit is first turned on?
 
 # User Input
 
