@@ -8,6 +8,15 @@
 
 ---
 
+- USB connector
+- LED matrix/display
+- User pushbuttons
+- Battery voltage sensing
+- Power LED
+- Debug LEDs
+- Boost converter for LEDs?
+- Microcontroller
+
 # Display
 
 - Ideally want RGB support—want to have RGB rainbows etc
