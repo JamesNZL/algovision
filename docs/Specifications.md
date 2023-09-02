@@ -3,6 +3,8 @@
 > [!NOTE]  
 > This document lists the specifications that the outcome must satisfy.
 
+---
+
 1. The outcome must be portable, and no larger than an iPad mini 6 ($195.43\,\text{mm} \times 134.75\,\text{mm}$, $12.88\,\text{mm}$ corner radius, [reference](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf#page=284)).
 
 2. The outcome must be reasonably priced—I don't mind putting a bit of money into it, and the focus is not on making something commercially viable—but it should be realistic.

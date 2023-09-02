@@ -3,6 +3,8 @@
 > [!NOTE]  
 > This document records any engineering or design considerations surrounding component selection.
 
+---
+
 # Display
 
 Potential options include an LED matrix, an LCD/OLED/other display, ...

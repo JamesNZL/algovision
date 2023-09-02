@@ -6,6 +6,8 @@
 > [!IMPORTANT]  
 > See also [[Goals]] and [[Specifications]]
 
+---
+
 # Display
 
 - Ideally want RGB support—want to have RGB rainbows etc

@@ -3,6 +3,8 @@
 > [!NOTE]  
 > This document lists the goals and outcomes that this project should aim to accomplish.
 
+---
+
 1. To complete a project that envelops hardware, firmware, and (possibly) software design
 
 2. To revise data structures/algorithms and visualise common sorting and pathfinding/search algorithms in an easily-understood manner
@@ -25,7 +27,7 @@
 
 11. To test my understanding of how displays/matrices are driven
 
-12. To have something to help show of Electrical/Computer Engineering!!!
+12. To have something to help show off Electrical/Computer Engineering!!!
 
 13. To understand and design how buck/boost converters work—if applicable
 
