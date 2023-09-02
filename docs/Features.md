@@ -8,17 +8,27 @@
 
 ---
 
-- USB connector
-- LED matrix/display
-- User pushbuttons
+# Power
+
+- Batteries
+- Voltage regulator(s) for supply rails
+- Boost converter for LEDs?
 - Battery voltage sensing
 - Power LED
-- Debug LEDs
-- Boost converter for LEDs?
-- Microcontroller
+
+# User Input
+
+- User pushbuttons
+	- How is the user expected to select each mode/algorithm?
 
 # Display
 
-- Ideally want RGB support—want to have RGB rainbows etc
-	- This only really works with an LED matrix though, an RGB rainbow on an LCD/OLED display is boring
+- LED matrix/display
+	- Ideally want RGB support—want to have RGB rainbows etc
+		- This only really works with an LED matrix though, an RGB rainbow on an LCD/OLED display is boring
  
+# Microcontroller/Programming
+
+- Microcontroller
+- USB connector
+- Debug LEDs
