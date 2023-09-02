@@ -12,8 +12,11 @@
 
 - Batteries
 	- How am I going to get the required voltage to drive my display? A boost converter can only do so much—especially if I require high current draw
+- Reverse polarity protection
 - Voltage regulator(s) for supply rails
+
 - Boost converter for LEDs?
+
 - Battery voltage sensing
 - Power LED
 - Auto-shutdown circuit
