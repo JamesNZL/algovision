@@ -1,0 +1,45 @@
+## Ignore Mac and Windows files
+.DS_Store
+desktop.ini
+Icon*
+
+## Ignore Altium files
+*.LOG
+__Previews/
+History/
+*.PrjPCBStructure
+*.SchDocPreview
+*.PcbDocPreview
+Project\ Logs
+
+## Ignore LTSpice created files
+*.net
+*.op
+*.raw
+*.lnk
+*.log
+*.plt
+*.ipynd_checkpoints
+*checkpoint.ipynb
+
+## Ignore compiled output files
+.vs/
+[Dd]ebug/
+[Rr]elease/
+*.o
+*.d
+*.eep
+*.elf
+*.hex
+*.map
+*.srec
+*.atsuo
+
+## Ignore MATLAB autosave files
+*.asv
+
+## Ignore Autodesk Inventor autosave files
+OldVersions/
+
+## Ignore temporary files
+*.tmp
