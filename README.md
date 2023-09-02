@@ -21,7 +21,7 @@
 
 # algovision
 
-A self-driven project to design an algorithm visualisation tool using an intersection of hardware and firmware.
+A self-driven project to design an algorithm visualisation tool with a union of hardware and firmware.
 
 # Licence
 
