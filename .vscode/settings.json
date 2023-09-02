@@ -2,6 +2,7 @@
 	"conventionalCommits.scopes": [
 		"readme",
 		"gitignore",
-		"clang"
+		"clang",
+		"actions"
 	]
 }
