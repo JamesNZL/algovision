@@ -32,4 +32,5 @@
 
 - Microcontroller
 - USB connector
+- USB to serial interface chip
 - Debug LEDs
