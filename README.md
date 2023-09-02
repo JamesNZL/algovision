@@ -1,4 +1,5 @@
 <div align="center">
+   <br>
    <div>
       <a href="https://github.com/JamesNZL/algovision/blob/main/LICENSE.md">
          <img src="https://img.shields.io/github/license/jamesnzl/algovision" alt="Repository license">
