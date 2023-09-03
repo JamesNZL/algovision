@@ -7,9 +7,6 @@
 <div align="center">
    <br>
    <div>
-      <a href="https://github.com/JamesNZL/algovision/blob/main/LICENSE.md">
-         <img src="https://img.shields.io/github/license/jamesnzl/algovision" alt="Repository license">
-      </a>
       <a href="https://github.com/JamesNZL/algovision/issues">
          <img src="https://img.shields.io/github/issues/jamesnzl/algovision" alt="GitHub issues">
       </a>
