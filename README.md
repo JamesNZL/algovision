@@ -1,5 +1,5 @@
 <div align="center">
-   <img src="assets/logo.svg" width="50%">
+   <img src="assets/logo.svg" width="75%">
    <div>
       <a href="https://github.com/JamesNZL/algovision/blob/main/LICENSE.md">
          <img src="https://img.shields.io/github/license/jamesnzl/algovision" alt="Repository license">
