@@ -29,7 +29,7 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 
 The [`Karbon`](https://klim.co.nz/retail-fonts/karbon/) font family is used within this project for non-commercial purposes under the [Klim Test Font Licence Agreement](https://klim.co.nz/licences/test-fonts/).
 
-The hardware design files in this repository are licensed under the `CERN Open Hardware Licence Version 2 - Permissive`, and source code is licensed under`MIT`.
+The hardware design files in this repository are licensed under the `CERN Open Hardware Licence Version 2 - Permissive`, and source code is licensed under `MIT`.
 
 See [`LICENSE.md`](./LICENSE.md) for full details.
 
