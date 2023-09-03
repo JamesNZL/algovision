@@ -3,6 +3,7 @@
 		"readme",
 		"gitignore",
 		"clang",
-		"actions"
+		"actions",
+		"assets"
 	]
 }
