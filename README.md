@@ -25,4 +25,6 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 
 # Licence
 
+The [`Karbon`](https://klim.co.nz/retail-fonts/karbon/) font family is used within this project for non-commercial purposes under the [Klim Test Font Licence Agreement](https://klim.co.nz/licences/test-fonts/).
+
 The contents of this repository are licensed under MIT.
