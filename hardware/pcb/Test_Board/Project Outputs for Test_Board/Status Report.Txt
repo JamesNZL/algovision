@@ -1,0 +1,18 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [Test_Board.PrjPcb]
+   Generated File[Test_Board.GTO]
+   Generated File[Test_Board.GTS]
+   Generated File[Test_Board.GTL]
+   Generated File[Test_Board.GBL]
+   Generated File[Test_Board.GBS]
+   Generated File[Test_Board.GBO]
+   Generated File[Test_Board.GM1]
+   Generated File[Test_Board.GKO]
+   Generated File[Test_Board.GM]
+
+
+Files Generated   : 9
+Documents Printed : 0
+
+Finished Output Generation At 3:22:43 pm On 4/09/2023

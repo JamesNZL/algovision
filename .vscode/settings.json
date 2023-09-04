@@ -4,6 +4,7 @@
 		"gitignore",
 		"clang",
 		"actions",
-		"assets"
+		"assets",
+		"pcb"
 	]
 }
