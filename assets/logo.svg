@@ -5,23 +5,24 @@
 <style type="text/css">
 	.Trace{fill:none;stroke:#282828;stroke-width:1.4173;stroke-miterlimit:10;}
 	.Start_x0020_Trace{fill:none;stroke:#282828;stroke-width:1.4173;stroke-miterlimit:10;}
-	.st0{fill:#282828;}
-	.st1{clip-path:url(#Wordmark_1_);}
-	.st2{fill:#343434;}
-	.st3{opacity:0.65;fill:#FFFFFF;}
-	.st4{fill:url(#SVGID_1_);}
-	.st5{clip-path:url(#Traces_2_);}
-	.st6{fill:url(#SVGID_2_);}
-	.st7{display:none;clip-path:url(#Traces_2_);fill:#D094FF;}
-	.st8{display:none;clip-path:url(#Traces_2_);}
-	.st9{display:inline;}
-	.st10{fill:none;stroke:#282828;stroke-width:1.4173;stroke-miterlimit:10;}
-	.st11{display:none;}
-	.st12{font-family:'Karbon-Bold';}
-	.st13{font-size:28.72px;}
+	.st0{display:none;}
+	.st1{display:inline;fill:#282828;}
+	.st2{clip-path:url(#Wordmark_1_);}
+	.st3{fill:#343434;}
+	.st4{opacity:0.65;fill:#FFFFFF;}
+	.st5{fill:url(#SVGID_1_);}
+	.st6{clip-path:url(#Traces_2_);}
+	.st7{fill:url(#SVGID_2_);}
+	.st8{display:none;clip-path:url(#Traces_2_);fill:#D094FF;}
+	.st9{display:none;clip-path:url(#Traces_2_);}
+	.st10{display:inline;}
+	.st11{fill:none;stroke:#282828;stroke-width:1.4173;stroke-miterlimit:10;}
+	.st12{fill:#282828;}
+	.st13{font-family:'Karbon-Bold';}
+	.st14{font-size:28.72px;}
 </style>
-<g id="Background">
-	<rect x="0" class="st0" width="283.5" height="181.4"/>
+<g id="Background" class="st0">
+	<rect x="0" class="st1" width="283.5" height="181.4"/>
 </g>
 <g id="Wordmark_2_">
 	<defs>
@@ -46,9 +47,9 @@
 	<clipPath id="Wordmark_1_">
 		<use xlink:href="#Wordmark_3_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st1">
-		<rect x="31.7" y="98.2" class="st2" width="200.3" height="61.7"/>
+	<g class="st2">
 		<rect x="31.7" y="98.2" class="st3" width="200.3" height="61.7"/>
+		<rect x="31.7" y="98.2" class="st4" width="200.3" height="61.7"/>
 		
 			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="187.5934" y1="86.5022" x2="296.2638" y2="149.2431" gradientTransform="matrix(1 0 0 1 -114.96 8.34)">
 			<stop  offset="0" style="stop-color:#62D0FF"/>
@@ -61,7 +62,7 @@
 			<stop  offset="0.9169" style="stop-color:#834E94"/>
 			<stop  offset="1" style="stop-color:#814A8B"/>
 		</linearGradient>
-		<rect x="31.7" y="98.2" class="st4" width="200.3" height="61.7"/>
+		<rect x="31.7" y="98.2" class="st5" width="200.3" height="61.7"/>
 	</g>
 </g>
 <g id="Logomark_2_">
@@ -149,9 +150,9 @@
 	<clipPath id="Traces_2_">
 		<use xlink:href="#Traces_1_"  style="overflow:visible;"/>
 	</clipPath>
-	<g class="st5">
-		<rect x="74.2" y="32.5" class="st2" width="151.8" height="146.1"/>
+	<g class="st6">
 		<rect x="74.2" y="32.5" class="st3" width="151.8" height="146.1"/>
+		<rect x="74.2" y="32.5" class="st4" width="151.8" height="146.1"/>
 		
 			<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="205.7611" y1="62.9908" x2="314.5595" y2="125.8056" gradientTransform="matrix(1 0 0 1 -114.96 8.34)">
 			<stop  offset="0" style="stop-color:#62D0FF"/>
@@ -161,520 +162,520 @@
 			<stop  offset="0.939" style="stop-color:#855199"/>
 			<stop  offset="1" style="stop-color:#814A8B"/>
 		</linearGradient>
-		<rect x="74.2" y="32.5" class="st6" width="151.8" height="146.1"/>
+		<rect x="74.2" y="32.5" class="st7" width="151.8" height="146.1"/>
 	</g>
-	<polygon id="Logomark_3_" class="st7" points="212.4,35.2 185.2,107.7 134.5,107.7 113.6,50.2 92.5,107.7 76.3,107.7 104.4,35.2 
+	<polygon id="Logomark_3_" class="st8" points="212.4,35.2 185.2,107.7 134.5,107.7 113.6,50.2 92.5,107.7 76.3,107.7 104.4,35.2 
 		123,35.2 146.1,94.1 161.4,94.1 139.3,35.2 155.9,35.2 176,92 195.9,35.2 	"/>
-	<g id="Traces" class="st8">
-		<g class="st9">
+	<g id="Traces" class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="81.9,96.4 84.8,96.4 87.1,94 96.3,94 				"/>
+				<polyline class="st11" points="81.9,96.4 84.8,96.4 87.1,94 96.3,94 				"/>
 				<g>
-					<circle class="st0" cx="82" cy="96.4" r="1.3"/>
+					<circle class="st12" cx="82" cy="96.4" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="96.2" cy="94" r="1.3"/>
+					<circle class="st12" cx="96.2" cy="94" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="84.3,90.3 89.9,90.3 93.6,94 				"/>
+				<polyline class="st11" points="84.3,90.3 89.9,90.3 93.6,94 				"/>
 				<g>
-					<circle class="st0" cx="84.3" cy="90.3" r="1.3"/>
+					<circle class="st12" cx="84.3" cy="90.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="86.2" y1="85.3" x2="99.5" y2="85.3"/>
+				<line class="st11" x1="86.2" y1="85.3" x2="99.5" y2="85.3"/>
 				<g>
-					<circle class="st0" cx="86.3" cy="85.3" r="1.3"/>
+					<circle class="st12" cx="86.3" cy="85.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="99.4" cy="85.3" r="1.3"/>
+					<circle class="st12" cx="99.4" cy="85.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="97.6" y1="76.1" x2="89.8" y2="76.1"/>
+				<line class="st11" x1="97.6" y1="76.1" x2="89.8" y2="76.1"/>
 				<g>
-					<circle class="st0" cx="89.8" cy="76.1" r="1.3"/>
+					<circle class="st12" cx="89.8" cy="76.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="88.2,80.1 93.6,80.1 97.6,76.1 102.8,76.1 				"/>
+				<polyline class="st11" points="88.2,80.1 93.6,80.1 97.6,76.1 102.8,76.1 				"/>
 				<g>
-					<circle class="st0" cx="88.3" cy="80.1" r="1.3"/>
+					<circle class="st12" cx="88.3" cy="80.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="102.8" cy="76.1" r="1.3"/>
+					<circle class="st12" cx="102.8" cy="76.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="92.1" y1="70.1" x2="105" y2="70.1"/>
+				<line class="st11" x1="92.1" y1="70.1" x2="105" y2="70.1"/>
 				<g>
-					<circle class="st0" cx="92.1" cy="70.1" r="1.3"/>
+					<circle class="st12" cx="92.1" cy="70.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="105" cy="70.1" r="1.3"/>
+					<circle class="st12" cx="105" cy="70.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="93.4" y1="66.7" x2="106.3" y2="66.7"/>
+				<line class="st11" x1="93.4" y1="66.7" x2="106.3" y2="66.7"/>
 				<g>
-					<circle class="st0" cx="93.5" cy="66.7" r="1.3"/>
+					<circle class="st12" cx="93.5" cy="66.7" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="106.2" cy="66.7" r="1.3"/>
+					<circle class="st12" cx="106.2" cy="66.7" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="94.8" y1="63.2" x2="107.6" y2="63.2"/>
+				<line class="st11" x1="94.8" y1="63.2" x2="107.6" y2="63.2"/>
 				<g>
-					<circle class="st0" cx="94.8" cy="63.2" r="1.3"/>
+					<circle class="st12" cx="94.8" cy="63.2" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="107.5" cy="63.2" r="1.3"/>
+					<circle class="st12" cx="107.5" cy="63.2" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="97.1" y1="57.3" x2="109.8" y2="57.3"/>
+				<line class="st11" x1="97.1" y1="57.3" x2="109.8" y2="57.3"/>
 				<g>
-					<circle class="st0" cx="97.1" cy="57.3" r="1.3"/>
+					<circle class="st12" cx="97.1" cy="57.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="109.7" cy="57.3" r="1.3"/>
+					<circle class="st12" cx="109.7" cy="57.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="111.3,53.1 104.3,53.1 100.1,57.2 				"/>
+				<polyline class="st11" points="111.3,53.1 104.3,53.1 100.1,57.2 				"/>
 				<g>
-					<circle class="st0" cx="111.2" cy="53.1" r="1.3"/>
+					<circle class="st12" cx="111.2" cy="53.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="105.1,36.6 114.9,36.6 119.4,41.1 				"/>
+				<polyline class="st11" points="105.1,36.6 114.9,36.6 119.4,41.1 				"/>
 				<g>
-					<circle class="st0" cx="105.1" cy="36.6" r="1.3"/>
+					<circle class="st12" cx="105.1" cy="36.6" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="124.1,41.1 111.5,41.1 107.9,44.7 101.9,44.7 				"/>
+				<polyline class="st11" points="124.1,41.1 111.5,41.1 107.9,44.7 101.9,44.7 				"/>
 				<g>
-					<circle class="st0" cx="124" cy="41.1" r="1.3"/>
+					<circle class="st12" cx="124" cy="41.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="102" cy="44.7" r="1.3"/>
+					<circle class="st12" cx="102" cy="44.7" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="100.4" y1="48.8" x2="127.1" y2="48.8"/>
+				<line class="st11" x1="100.4" y1="48.8" x2="127.1" y2="48.8"/>
 				<g>
-					<circle class="st0" cx="100.4" cy="48.8" r="1.3"/>
+					<circle class="st12" cx="100.4" cy="48.8" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="127" cy="48.8" r="1.3"/>
+					<circle class="st12" cx="127" cy="48.8" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="113.7,44.7 119.4,44.7 123.5,48.8 				"/>
+				<polyline class="st11" points="113.7,44.7 119.4,44.7 123.5,48.8 				"/>
 				<g>
-					<circle class="st0" cx="113.7" cy="44.7" r="1.3"/>
+					<circle class="st12" cx="113.7" cy="44.7" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="116,53.1 121.6,53.1 125.9,57.3 130.4,57.3 				"/>
+				<polyline class="st11" points="116,53.1 121.6,53.1 125.9,57.3 130.4,57.3 				"/>
 				<g>
-					<circle class="st0" cx="116" cy="53.1" r="1.3"/>
+					<circle class="st12" cx="116" cy="53.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="130.4" cy="57.3" r="1.3"/>
+					<circle class="st12" cx="130.4" cy="57.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="119.6" y1="63.2" x2="132.7" y2="63.2"/>
+				<line class="st11" x1="119.6" y1="63.2" x2="132.7" y2="63.2"/>
 				<g>
-					<circle class="st0" cx="119.7" cy="63.2" r="1.3"/>
+					<circle class="st12" cx="119.7" cy="63.2" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="132.7" cy="63.2" r="1.3"/>
+					<circle class="st12" cx="132.7" cy="63.2" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="122.2" y1="70.1" x2="135.4" y2="70.1"/>
+				<line class="st11" x1="122.2" y1="70.1" x2="135.4" y2="70.1"/>
 				<g>
-					<circle class="st0" cx="122.2" cy="70.1" r="1.3"/>
+					<circle class="st12" cx="122.2" cy="70.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="135.4" cy="70.1" r="1.3"/>
+					<circle class="st12" cx="135.4" cy="70.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="124.3,76.1 132.7,76.1 136.7,80.1 139.3,80.1 				"/>
+				<polyline class="st11" points="124.3,76.1 132.7,76.1 136.7,80.1 139.3,80.1 				"/>
 				<g>
-					<circle class="st0" cx="124.4" cy="76.1" r="1.3"/>
+					<circle class="st12" cx="124.4" cy="76.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="139.3" cy="80.1" r="1.3"/>
+					<circle class="st12" cx="139.3" cy="80.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="136.7" y1="80.1" x2="125.8" y2="80.1"/>
+				<line class="st11" x1="136.7" y1="80.1" x2="125.8" y2="80.1"/>
 				<g>
-					<circle class="st0" cx="125.8" cy="80.1" r="1.3"/>
+					<circle class="st12" cx="125.8" cy="80.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="140.9,84.1 134.8,84.1 130.9,80.1 				"/>
+				<polyline class="st11" points="140.9,84.1 134.8,84.1 130.9,80.1 				"/>
 				<g>
-					<circle class="st0" cx="140.8" cy="84.1" r="1.3"/>
+					<circle class="st12" cx="140.8" cy="84.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="129.5" y1="90.3" x2="143.3" y2="90.3"/>
+				<line class="st11" x1="129.5" y1="90.3" x2="143.3" y2="90.3"/>
 				<g>
-					<circle class="st0" cx="129.6" cy="90.3" r="1.3"/>
+					<circle class="st12" cx="129.6" cy="90.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="143.3" cy="90.3" r="1.3"/>
+					<circle class="st12" cx="143.3" cy="90.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="147.5,95.5 137.8,95.5 132.6,90.4 				"/>
+				<polyline class="st11" points="147.5,95.5 137.8,95.5 132.6,90.4 				"/>
 				<g>
-					<circle class="st0" cx="147.4" cy="95.5" r="1.3"/>
+					<circle class="st12" cx="147.4" cy="95.5" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="188.5,95.5 154.3,95.5 150,99.8 132.9,99.8 				"/>
+				<polyline class="st11" points="188.5,95.5 154.3,95.5 150,99.8 132.9,99.8 				"/>
 				<g>
-					<circle class="st0" cx="188.4" cy="95.5" r="1.3"/>
+					<circle class="st12" cx="188.4" cy="95.5" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="133" cy="99.8" r="1.3"/>
+					<circle class="st12" cx="133" cy="99.8" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="177.9,90.3 181.5,90.3 186.6,85.3 192.3,85.3 				"/>
+				<polyline class="st11" points="177.9,90.3 181.5,90.3 186.6,85.3 192.3,85.3 				"/>
 				<g>
-					<circle class="st0" cx="177.9" cy="90.3" r="1.3"/>
+					<circle class="st12" cx="177.9" cy="90.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="192.2" cy="85.3" r="1.3"/>
+					<circle class="st12" cx="192.2" cy="85.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="182.2,95.5 187.5,90.3 190.4,90.3 				"/>
+				<polyline class="st11" points="182.2,95.5 187.5,90.3 190.4,90.3 				"/>
 				<g>
-					<circle class="st0" cx="190.4" cy="90.3" r="1.3"/>
+					<circle class="st12" cx="190.4" cy="90.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="195.7" y1="76.1" x2="182.8" y2="76.1"/>
+				<line class="st11" x1="195.7" y1="76.1" x2="182.8" y2="76.1"/>
 				<g>
-					<circle class="st0" cx="195.7" cy="76.1" r="1.3"/>
+					<circle class="st12" cx="195.7" cy="76.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="182.9" cy="76.1" r="1.3"/>
+					<circle class="st12" cx="182.9" cy="76.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="181.5,80.1 188.3,80.1 192.3,76.1 				"/>
+				<polyline class="st11" points="181.5,80.1 188.3,80.1 192.3,76.1 				"/>
 				<g>
-					<circle class="st0" cx="181.5" cy="80.1" r="1.3"/>
+					<circle class="st12" cx="181.5" cy="80.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="197.2,72.2 189.3,72.2 185.3,76.1 				"/>
+				<polyline class="st11" points="197.2,72.2 189.3,72.2 185.3,76.1 				"/>
 				<g>
-					<circle class="st0" cx="197.2" cy="72.2" r="1.3"/>
+					<circle class="st12" cx="197.2" cy="72.2" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="186.2" y1="66.7" x2="199.3" y2="66.7"/>
+				<line class="st11" x1="186.2" y1="66.7" x2="199.3" y2="66.7"/>
 				<g>
-					<circle class="st0" cx="186.2" cy="66.7" r="1.3"/>
+					<circle class="st12" cx="186.2" cy="66.7" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="199.2" cy="66.7" r="1.3"/>
+					<circle class="st12" cx="199.2" cy="66.7" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="200.6,63.2 193.6,63.2 189.9,66.9 				"/>
+				<polyline class="st11" points="200.6,63.2 193.6,63.2 189.9,66.9 				"/>
 				<g>
-					<circle class="st0" cx="200.5" cy="63.2" r="1.3"/>
+					<circle class="st12" cx="200.5" cy="63.2" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="189.4" y1="57.3" x2="202.8" y2="57.3"/>
+				<line class="st11" x1="189.4" y1="57.3" x2="202.8" y2="57.3"/>
 				<g>
-					<circle class="st0" cx="189.5" cy="57.3" r="1.3"/>
+					<circle class="st12" cx="189.5" cy="57.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="202.7" cy="57.3" r="1.3"/>
+					<circle class="st12" cx="202.7" cy="57.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="190.9" y1="53.1" x2="204.4" y2="53.1"/>
+				<line class="st11" x1="190.9" y1="53.1" x2="204.4" y2="53.1"/>
 				<g>
-					<circle class="st0" cx="191" cy="53.1" r="1.3"/>
+					<circle class="st12" cx="191" cy="53.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="204.3" cy="53.1" r="1.3"/>
+					<circle class="st12" cx="204.3" cy="53.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="196.7,36.6 200.1,36.6 204.5,41 208.9,41 				"/>
+				<polyline class="st11" points="196.7,36.6 200.1,36.6 204.5,41 208.9,41 				"/>
 				<g>
-					<circle class="st0" cx="196.7" cy="36.6" r="1.3"/>
+					<circle class="st12" cx="196.7" cy="36.6" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="208.9" cy="41" r="1.3"/>
+					<circle class="st12" cx="208.9" cy="41" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="195.1" y1="41" x2="204.5" y2="41"/>
+				<line class="st11" x1="195.1" y1="41" x2="204.5" y2="41"/>
 				<g>
-					<circle class="st0" cx="195.2" cy="41" r="1.3"/>
+					<circle class="st12" cx="195.2" cy="41" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="155.1,36.6 151.7,36.6 147.3,41 142.9,41 				"/>
+				<polyline class="st11" points="155.1,36.6 151.7,36.6 147.3,41 142.9,41 				"/>
 				<g>
-					<circle class="st0" cx="155" cy="36.6" r="1.3"/>
+					<circle class="st12" cx="155" cy="36.6" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="142.9" cy="41" r="1.3"/>
+					<circle class="st12" cx="142.9" cy="41" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="156.7" y1="41" x2="147.3" y2="41"/>
+				<line class="st11" x1="156.7" y1="41" x2="147.3" y2="41"/>
 				<g>
-					<circle class="st0" cx="156.6" cy="41" r="1.3"/>
+					<circle class="st12" cx="156.6" cy="41" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="158,44.7 154,44.7 149.9,48.8 				"/>
+				<polyline class="st11" points="158,44.7 154,44.7 149.9,48.8 				"/>
 				<g>
-					<circle class="st0" cx="157.9" cy="44.7" r="1.3"/>
+					<circle class="st12" cx="157.9" cy="44.7" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="145.7" y1="48.8" x2="159.4" y2="48.8"/>
+				<line class="st11" x1="145.7" y1="48.8" x2="159.4" y2="48.8"/>
 				<g>
-					<circle class="st0" cx="145.7" cy="48.8" r="1.3"/>
+					<circle class="st12" cx="145.7" cy="48.8" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="159.4" cy="48.8" r="1.3"/>
+					<circle class="st12" cx="159.4" cy="48.8" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="147.3,53.1 151.1,53.1 155.4,48.8 				"/>
+				<polyline class="st11" points="147.3,53.1 151.1,53.1 155.4,48.8 				"/>
 				<g>
-					<circle class="st0" cx="147.3" cy="53.1" r="1.3"/>
+					<circle class="st12" cx="147.3" cy="53.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="148.9" y1="57.3" x2="162.4" y2="57.3"/>
+				<line class="st11" x1="148.9" y1="57.3" x2="162.4" y2="57.3"/>
 				<g>
-					<circle class="st0" cx="148.9" cy="57.3" r="1.3"/>
+					<circle class="st12" cx="148.9" cy="57.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="162.4" cy="57.3" r="1.3"/>
+					<circle class="st12" cx="162.4" cy="57.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="151.1" y1="63.2" x2="164.5" y2="63.2"/>
+				<line class="st11" x1="151.1" y1="63.2" x2="164.5" y2="63.2"/>
 				<g>
-					<circle class="st0" cx="151.1" cy="63.2" r="1.3"/>
+					<circle class="st12" cx="151.1" cy="63.2" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="164.5" cy="63.2" r="1.3"/>
+					<circle class="st12" cx="164.5" cy="63.2" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="152.4,66.7 158.5,66.7 162,70.2 167,70.2 				"/>
+				<polyline class="st11" points="152.4,66.7 158.5,66.7 162,70.2 167,70.2 				"/>
 				<g>
-					<circle class="st0" cx="152.4" cy="66.7" r="1.3"/>
+					<circle class="st12" cx="152.4" cy="66.7" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="166.9" cy="70.2" r="1.3"/>
+					<circle class="st12" cx="166.9" cy="70.2" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="153.7" y1="70.2" x2="162" y2="70.2"/>
+				<line class="st11" x1="153.7" y1="70.2" x2="162" y2="70.2"/>
 				<g>
-					<circle class="st0" cx="153.7" cy="70.2" r="1.3"/>
+					<circle class="st12" cx="153.7" cy="70.2" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="169.1" y1="76.1" x2="155.9" y2="76.1"/>
+				<line class="st11" x1="169.1" y1="76.1" x2="155.9" y2="76.1"/>
 				<g>
-					<circle class="st0" cx="169.1" cy="76.1" r="1.3"/>
+					<circle class="st12" cx="169.1" cy="76.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="156" cy="76.1" r="1.3"/>
+					<circle class="st12" cx="156" cy="76.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="174.1,90.3 170.5,90.3 165.4,85.3 159.4,85.3 				"/>
+				<polyline class="st11" points="174.1,90.3 170.5,90.3 165.4,85.3 159.4,85.3 				"/>
 				<g>
-					<circle class="st0" cx="174.1" cy="90.3" r="1.3"/>
+					<circle class="st12" cx="174.1" cy="90.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="159.4" cy="85.3" r="1.3"/>
+					<circle class="st12" cx="159.4" cy="85.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="157.4" y1="80.1" x2="170.5" y2="80.1"/>
+				<line class="st11" x1="157.4" y1="80.1" x2="170.5" y2="80.1"/>
 				<g>
-					<circle class="st0" cx="157.5" cy="80.1" r="1.3"/>
+					<circle class="st12" cx="157.5" cy="80.1" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="170.5" cy="80.1" r="1.3"/>
+					<circle class="st12" cx="170.5" cy="80.1" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<polyline class="st10" points="169.4,95.5 164.2,90.3 161.2,90.3 				"/>
+				<polyline class="st11" points="169.4,95.5 164.2,90.3 161.2,90.3 				"/>
 				<g>
-					<circle class="st0" cx="161.3" cy="90.3" r="1.3"/>
+					<circle class="st12" cx="161.3" cy="90.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
 				<line class="Trace" x1="79.7" y1="102" x2="93.3" y2="102"/>
 				<g>
-					<circle class="st0" cx="79.8" cy="102" r="1.3"/>
+					<circle class="st12" cx="79.8" cy="102" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="93.3" cy="102" r="1.3"/>
+					<circle class="st12" cx="93.3" cy="102" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
 				<polyline class="Start_x0020_Trace" points="78.1,106.3 83,106.3 87.3,102 				"/>
 				<g>
-					<circle class="st0" cx="78.2" cy="106.3" r="1.3"/>
+					<circle class="st12" cx="78.2" cy="106.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
-				<line class="st10" x1="135.3" y1="106.3" x2="184.4" y2="106.3"/>
+				<line class="st11" x1="135.3" y1="106.3" x2="184.4" y2="106.3"/>
 				<g>
-					<circle class="st0" cx="135.3" cy="106.3" r="1.3"/>
+					<circle class="st12" cx="135.3" cy="106.3" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="184.4" cy="106.3" r="1.3"/>
+					<circle class="st12" cx="184.4" cy="106.3" r="1.3"/>
 				</g>
 			</g>
 		</g>
-		<g class="st9">
+		<g class="st10">
 			<g>
 				<polyline class="Trace" points="157.2,99.8 170,99.8 172.2,102 186,102 				"/>
 				<g>
-					<circle class="st0" cx="157.3" cy="99.8" r="1.3"/>
+					<circle class="st12" cx="157.3" cy="99.8" r="1.3"/>
 				</g>
 				<g>
-					<circle class="st0" cx="186" cy="102" r="1.3"/>
+					<circle class="st12" cx="186" cy="102" r="1.3"/>
 				</g>
 			</g>
 		</g>
 	</g>
 </g>
-<g id="algovision_1_" class="st11">
-	<text id="Wordmark_4_" transform="matrix(1 0 0 1 61.6941 143.7163)" class="st9 st12 st13">ALGOVISION</text>
-	<g id="Logomark" class="st9">
+<g id="algovision_1_" class="st0">
+	<text id="Wordmark_4_" transform="matrix(1 0 0 1 61.6941 143.7163)" class="st10 st13 st14">ALGOVISION</text>
+	<g id="Logomark" class="st10">
 		<g id="Layer_14">
 		</g>
 		<g id="Layer_15">
@@ -694,7 +695,7 @@
 	</g>
 </g>
 <g id="Guides">
-	<path class="st11" d="M76,143.7l-1.1-3.2H68l-1.2,3.2h-4.5l6.6-17.1H74l6.6,17.1H76z M71.5,130.9l-2.2,6.1h4.4L71.5,130.9z"/>
-	<path class="st11" d="M201.4,126.7l6.9,10.5v-10.5h4.1v17.1h-4l-7.1-10.3v10.3h-4.1v-17.1H201.4z"/>
+	<path class="st0" d="M76,143.7l-1.1-3.2H68l-1.2,3.2h-4.5l6.6-17.1H74l6.6,17.1H76z M71.5,130.9l-2.2,6.1h4.4L71.5,130.9z"/>
+	<path class="st0" d="M201.4,126.7l6.9,10.5v-10.5h4.1v17.1h-4l-7.1-10.3v10.3h-4.1v-17.1H201.4z"/>
 </g>
 </svg>
