@@ -1,5 +1,5 @@
 <div align="center">
-   <img src="assets/logo-min.svg" width="82.5%">
+   <img src="assets/logo-animated.svg" width="82.5%">
 </div>
 
 # algovision
