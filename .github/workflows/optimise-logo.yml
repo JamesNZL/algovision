@@ -20,6 +20,8 @@ jobs:
         id: svgo
         with:
           svgo-version: 3
+          ignore: |
+            assets/logo-animated.svg
           repo-token: ${{secrets.GITHUB_TOKEN}}
             
       - shell: bash
