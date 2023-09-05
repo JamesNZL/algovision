@@ -1,7 +1,7 @@
 #5e5ce6/projects 
 
 <div align="center">
-   <img src="https://raw.githubusercontent.com/JamesNZL/algovision/main/assets/logo.svg" width="82.5%">
+   <img src="https://raw.githubusercontent.com/JamesNZL/algovision/main/assets/logo-min.svg" width="82.5%">
 </div>
 
 # algovision
