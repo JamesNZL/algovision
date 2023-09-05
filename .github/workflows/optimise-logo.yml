@@ -24,7 +24,11 @@ jobs:
             
       - shell: bash
         run: |
-          git status --porcelain | awk '/\.svg$/ {print $2}' | xargs -I {} sh -c 'git mv {} $(basename {} .svg)-min.svg'
+          git status --porcelain | awk '/\.svg$/ {print $2}' | xargs -I {} sh -c 'cp {} $(basename {} .svg)-min.svg'
+          
+      - shell: bash
+        run: |
+          git reset --hard
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         if: ${{steps.svgo.outputs.DID_OPTIMIZE}}
