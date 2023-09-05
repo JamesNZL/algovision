@@ -24,7 +24,7 @@ jobs:
             
       - shell: bash
         run: |
-          git status --porcelain | awk '/\.svg$/ {print $2}' | xargs -I {} sh -c 'cp {} $(basename {} .svg)-min.svg'
+          git status --porcelain | awk '/\.svg$/ {print $2}' | xargs -I {} sh -c 'cp {} $(dirname {})/$(basename {} .svg)-min.svg'
           
       - shell: bash
         run: |
