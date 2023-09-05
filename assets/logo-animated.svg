@@ -5618,12 +5618,12 @@
     }
 		
 		.hidden {
-			animation: fadeIn 0.7s 4.4s ease-in-out forwards;
+			animation: fadeIn 1.5s 4.4s ease-in-out forwards;
 			opacity: 0;
 		}
 		
 		.visible {
-			animation: fadeOut 0.2s 7s ease-out forwards;
+			animation: fadeOut 0.2s 7.5s ease-out forwards;
 		}
   </style>
   <switch>
