@@ -15,7 +15,7 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 ## Pages
 
 > [!NOTE]  
-> These pages are mirrored to the [repository wiki](../../../wiki).
+> These pages are mirrored to the [repository wiki](https://github.com/JamesNZL/algovision/wiki).
 
 [[Goals]]  
 [[Specifications]]  
