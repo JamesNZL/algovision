@@ -2,3 +2,5 @@
 Version=1.0
 [Project1]
 ProjectPath=Test_Board\Test_Board.PrjPcb
+[Project2]
+ProjectPath=Main_Board\Main_Board.PrjPcb
