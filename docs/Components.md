@@ -28,11 +28,16 @@
 	3. Communication/driving protocol (data lines required, uC peripherals needed); and
 	4. Cost.
 
-## LED Matrix
+## Discrete LED Matrix
 
-![LED Matrix](https://chicagodist.com/cdn/shop/products/1484-00_2048x.jpg?v=1594330893)
+![Discrete LED Matrix](https://cdn-blog.adafruit.com/uploads/2017/06/3484_iso_kit_ORIG.jpg)
+
+### Part Numbers
+
+> [!todo]
 
 ### Pros
+
 - Likely the simplest to implement in hardware/firmware (without external libraries)
 - Can easily understand/communicate how it works
 - Would have the prettiest RGB rainbow animations
@@ -40,15 +45,43 @@
 - Can implement from scratch myself, without needing to buy a module
 
 ### Cons
-- Lots of individual components for a medium-large matrix...
+- Lots of individual LEDs for a medium-large matrix...
 - Cost?
 - Power draw—unsure of how power-hungry the other options are, but I expect this to be more power-hungry than a off-the-shelf display module
 - Far inferior pixel density/resolution
 - Heat dissipation—may require me to produce my *own* LED matrix module on an aluminium board—at which point I might want to just buy a commercial product?
 
+## LED Matrix Module/Panel
+
+![LED Matrix Panel](https://chicagodist.com/cdn/shop/products/1484-00_2048x.jpg?v=1594330893)
+
+| Part Number       | `Adafruit 420`                                                    | `Adafruit 607`                                                    |
+| ----------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Image             | ![Adafruit 420](https://cdn-shop.adafruit.com/970x728/420-08.jpg) | ![Adafruit 607](https://cdn-shop.adafruit.com/970x728/607-07.jpg) |
+| Supplier Link     | [Adafruit](https://www.adafruit.com/product/420)                  | [Adafruit](https://www.adafruit.com/product/607)                  |
+| LED part          | `SMD3528`                                                         |                                                                   |
+| Resolution        | 512 LEDs, $16\times 32$ matrix                                    | 1024 LEDs, $32\times 32$ matrix                                   |
+| Dimensions        | $192\,\text{mm} \times 96\,\text{mm} \times 12\,\text{mm}$        | $128\,\text{mm} \times 128\,\text{mm} \times 17\,\text{mm}$       |
+| Operating Voltage | Regulated $5\,\text{V}$                                           | Regulated $5\,\text{V}$                                           |
+| Max Current Draw  | $2.5\,\text{A}$                                                   | $4\,\text{A}$                                                     |
+| Driving Method    | $1/8$ scan, $50\sim60\,\text{Hz}$                                 | $1/16$ scan                                                       |
+| Data Lines        | 13 GPIO pins                                                      | 13 GPIO pins                                                      |
+| Cost              | USD$24.95                                                         | USD$29.95                                                         |
+| Remarks           |                                                                   |                                                                   |
+
+### Pros
+
+- Primarily the same as that for a custom-built LED matrix with discrete LEDs
+- Probably cheaper than building it myself
+
+### Cons
+- Don't get to do the design/layout myself
+
 ## Dot Matrix Module
 
 ![Dot Matrix Module](https://m.media-amazon.com/images/I/71qBLiOKTHL._AC_UF1000,1000_QL80_.jpg)
+
+> [!todo]
 
 ### Pros
 
@@ -64,8 +97,9 @@
 
 ## LCD Module
 
-![LCD Module](https://www.jaycar.co.nz/medias/sys_master/images/images/9944545165342/QP5520-dot-matrix-liquid-crystal-display-modules-alphanumeric-large-displayImageMain-515.jpg)
+![LCD Module](https://docs.arduino.cc/static/7a7f1f877f04d48236ab166814aab58f/0a47e/lcd_photo.png)
 
+> [!todo]
 ### Pros
 
 - Cheap
@@ -79,6 +113,8 @@
 ## OLED Module
 
 ![OLED Module](https://m.media-amazon.com/images/I/71TyuPDzXVL.jpg)
+
+> [!todo]
 
 ### Pros
 
@@ -94,7 +130,10 @@
 
 ## TFT Display
 
-![TFT Display Module](https://www.mouser.in/images/displaytechltd/lrg/DT022CTFT_SPL.jpg)
+![TFT Display Module](https://nl.mouser.com/images/marketingid/2020/img/188257339.png?v=070223.0420)
+
+> [!todo]
+> https://www.google.com/search?sca_esv=564062611&sxsrf=AB5stBhrVAe-ZPkdDOJhhh3ip1lqiHs85Q:1694307902282&q=tft+display+modules&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiE_J7l7J6BAxWJTWwGHQxNDBUQ0pQJegQICRAB&biw=1548&bih=1145&dpr=1.1#imgrc=D6KcvaiVJFwe1M
 
 ### Pros
 
