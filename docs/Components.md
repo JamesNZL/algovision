@@ -34,6 +34,28 @@
 
 ### Part Numbers
 
+#### RGBW, Non-Addressable
+
+| Part Number              | `CSPM1411RGBW-IC-6`                                                                                                | `IN-P55QSTGRGBW`                                                                                         | `QLSP08RGBW`                                                                                         | `IN-P55QDTRGBW`                                                                                        | `QBLP679-RGBCW`                                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| Image                    | ![CSPM1411RGBW-IC-6](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/5059/MFG_CSPM1411RGBW-IC-6.jpg) | ![IN-P55QSTGRGBW](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/3701/IN-P55QSTGRGBW.JPG) | ![QLSP08RGBW](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/3954/MFG_QLSP08RGBW.jpg) | ![IN-P55QDTRGBW](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/3794/IN-P55QDTRGBW.JPG) | ![QBLP679-RGBCW](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/4499/MFG_QBLP679-RGBXW.jpg) |
+| Supplier Link            | [DigiKey](https://www.digikey.com/en/products/detail/chromeled/CSPM1411RGBW-IC-6/17289300)                         | [DigiKey](https://www.digikey.com/en/products/detail/inolux/IN-P55QSTGRGBW/14555727)                     | [DigiKey](https://www.digikey.com/en/products/detail/quelighting-corp/QLSP08RGBW/15848755)           | [DigiKey](https://www.digikey.com/en/products/detail/inolux/IN-P55QDTRGBW/14555746)                    | [DigiKey](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBLP679-RGBCW/13278847)               |
+| Colour                   | RGBW                                                                                                               | RGBW                                                                                                     | RGBW                                                                                                 | RGBW                                                                                                   | RGBW                                                                                                       |
+| Lens                     | Clear                                                                                                              | Clear                                                                                                    | Clear                                                                                                | Clear                                                                                                  | Clear RGB, Diffused W                                                                                      |
+| Package/Dimensions       | $3.7\,\text{mm} \times 3.5\,\text{mm}$                                                                             | $5.4\,\text{mm} \times 5\,\text{mm} \times 1.1\,\text{mm}$                                               | $5\,\text{mm} \times 5\,\text{mm} \times 1.6\,\text{mm}$                                             | $5.5\,\text{mm} \times 5\,\text{mm} \times $1.65\,\text{mm}$                                           | $5\,\text{mm} \times 5\,\text{mm} \times 1.65\,\text{mm}$                                                  |
+| Absolute Maximum Voltage | $3.7 \sim 5.5\,\text{V}$                                                                                           | $3.6\,\text{V}$                                                                                          | $3.4\,\text{V}$                                                                                      | $3.6\,\text{V}$                                                                                        | $3.7\,\text{V}$                                                                                            |
+| Average Forward Current  | $45\,\text{mA}$                                                                                                    | $600\,\text{mA}$                                                                                         | $120\,\text{mA}$                                                                                     | $90\,\text{mA}$                                                                                        | $80\,\text{mA}$                                                                                            |
+| Frequency                | $800\,\text{kHz}$                                                                                                  | -                                                                                                        | -                                                                                                    | -                                                                                                      | -                                                                                                          |
+| Driving Method           | Serial, detailed in datasheet                                                                                      | Direct connection to A/K                                                                                 | Direct connection to A/K                                                                             | Direct connection to A/K                                                                               | Direct connection to A/K                                                                                   |
+| Data Lines               | 1 GPIO pin                                                                                                         | $\geq 3$ GPIO pins                                                                                       | $\geq 3$ GPIO pins                                                                                   | $\geq 3$ GPIO pins                                                                                     | $\geq 3$ GPIO pins                                                                                         |
+| Cost (for 256)           | USD$74.24                                                                                                          | USD$138.73                                                                                               | USD$55.60                                                                                            | USD$77.82                                                                                              | USD$81.05                                                                                                  |
+| Remarks                  |                                                                                                                    |                                                                                                          |                                                                                                      |                                                                                                        |                                                                                                            |
+
+> [!success] Preferred Device
+> `IN-P55QDTRGBW` is looking the most desirable, `IN-P55QSTGRGBW` is too high power
+
+#### RGB, Non-Addressable
+
 > [!todo]
 
 ### Pros
@@ -111,7 +133,6 @@
 
 ![LCD Module](https://docs.arduino.cc/static/7a7f1f877f04d48236ab166814aab58f/0a47e/lcd_photo.png)
 
-> [!todo]
 ### Pros
 
 - Cheap
@@ -125,8 +146,6 @@
 ## OLED Module
 
 ![OLED Module](https://m.media-amazon.com/images/I/71TyuPDzXVL.jpg)
-
-> [!todo]
 
 ### Pros
 
@@ -142,10 +161,7 @@
 
 ## TFT Display
 
-![TFT Display Module](https://nl.mouser.com/images/marketingid/2020/img/188257339.png?v=070223.0420)
-
-> [!todo]
-> https://www.google.com/search?sca_esv=564062611&sxsrf=AB5stBhrVAe-ZPkdDOJhhh3ip1lqiHs85Q:1694307902282&q=tft+display+modules&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiE_J7l7J6BAxWJTWwGHQxNDBUQ0pQJegQICRAB&biw=1548&bih=1145&dpr=1.1#imgrc=D6KcvaiVJFwe1M
+![TFT Display Module](https://nl.mouser.com/images/marketingid/2020/img/188257339.png)
 
 ### Pros
 
