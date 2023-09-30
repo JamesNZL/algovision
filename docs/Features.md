@@ -39,6 +39,7 @@
 	- Ideally want RGB support—want to have RGB rainbows etc
 		- This only really works with an LED matrix though, an RGB rainbow on an LCD/OLED display is boring
 	- Should have sufficient resolution to display the logo
+		- Minimum size of $20\times15$ LEDs to effectively show pathfinding
 - Shift registers if required
  
 # Microcontroller/Programming
