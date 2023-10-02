@@ -75,15 +75,26 @@
 	- ie, I will need to produce the PWM signal for the RGB data lines for each of my LEDs at the output of my shift register, if I want to have more than just the base combination of colours
 	- This is $3\times n_\text{LEDs}$ bits per row, where $n_\text{LEDs}$ is the number of LEDs in that row
 	- I will also need to refresh each row *multiple (many)* times per display state, in order to produce the necessary PWM for each of the RGB data lines
-	- This is likely to become impracticable for a large matrixeach row *multiple (many)* times per display state, in order to produce the necessary PWM for each of the RGB data lines
+	- This is likely to become impracticable for a large matrix—I would need to refresh each row *multiple (many)* times per display state, in order to produce the necessary PWM for each of the RGB data lines
 	- This is likely to become impracticable, as I would need to refresh each row 256 times per frame to produce the typical 16.8 M colours (ie giving each RGB data line a PWM duty cycle of 256 'counts')
 	- Thus to drive the display at a reasonable $30\,\text{fps}$, the timing requirements are likely to become quite complex & computationally disruptive (many interrupts very quickly)
 	- It would also likely be reasonably complex to implement correctly
 	- Would also produce a worse colour output as there is no constant current drive circuity; each RGB data input would require its own current limiting protection resistor, etc
 	- Could use an LED driver IC to resolve most of those problems, but DigiKey only stocks ICs with up to 48 outputs—this would correspond to only 16 RGB LEDs per driver, requiring *lots* of drivers for a full matrix—accounting for GPIO pins/routing paths (not to mention cost), this is still not very practicable
 
+> [!todo]
+> Actually work through the timing requirements to determine the necessary control frequency
+
 > [!question]
 > I'm actually not convinced by this... people have built $8\times 8\times 8 = 512$ RGB LED cubes with non-addressable LEDs, so it must be possible and realistic
+
+- Addressing the hardware concerns—if I employ both shifting (standard shift registers or LED drivers) and multiplexing, I am sure I can significantly cut down on the number of ICs required—it would just increase the complexity of the firmware, but that is fine, provided the clock timing requirements remain reasonable
+	- If I want to drive 8 LEDs at once, this requires $8\times 3 = 24\,\text{bits}$ required in the shift register, or 24 channels in the LED driver
+	- If I use a 48 channel LED driver, this would correspond to 16 LEDs at once
+	- Assuming a matrix of $20\times 16$, this could be one entire row at once
+	- I could then use a single driver and multiplex through the columns one at a time
+	- This would be very reasonable...
+	- With two drivers, I could scan through from Column 0 to Column 9 and Column 10 to Column 19, which I have seen detailed in the datasheets for the Adafruit matrices as providing a smoother visual appearance
 
 #### Addressable
 
