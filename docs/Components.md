@@ -28,13 +28,15 @@
 	3. Communication/driving protocol (data lines required, uC peripherals needed); and
 	4. Cost.
 
-## Discrete LED Matrix
+## Part Number Selection
+
+### Discrete LED Matrix
 
 ![Discrete LED Matrix](https://cdn-blog.adafruit.com/uploads/2017/06/3484_iso_kit_ORIG.jpg)
 
-### Part Numbers
+#### Part Numbers
 
-#### RGBW, Non-Addressable
+##### RGBW, Non-Addressable
 
 | Part Number              | `CSPM1411RGBW-IC-6`                                                                                                | `IN-P55QSTGRGBW`                                                                                         | `QLSP08RGBW`                                                                                         | `IN-P55QDTRGBW`                                                                                        | `QBLP679-RGBCW`                                                                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -54,7 +56,7 @@
 > [!success] Preferred Device
 > `IN-P55QDTRGBW` is looking the most desirable, `IN-P55QSTGRGBW` is too high power
 
-#### RGB, Non-Addressable
+##### RGB, Non-Addressable
 
 | Part Number              | `CLMVC-FKA-CL1D1L71BB7C3C3`                                                                                                       | `IN-S66TBTRGB`                                                                                      | `IN-P32TATRGB`                                                                                      | `150141M173100`                                                                                       | `IN-S128TATRGB`                                                                                       | `ASMB-LTB2-0A333`                                                                                                  | `ASMB-KTF0-0A306`                                                                                             | `LTST-C19HE1WT`                                                                                               | `ASMB-TTF0-0A20B`                                                                                         |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -96,7 +98,7 @@
 	- This would be very reasonable...
 	- With two drivers, I could scan through from Column 0 to Column 9 and Column 10 to Column 19, which I have seen detailed in the datasheets for the Adafruit matrices as providing a smoother visual appearance
 
-#### Addressable
+##### Addressable
 
 | Part Number             | `601000200`                                                                                       | `IN-PI15TAT5R5G5B`                                                                                           | `IN-PI20TBT5R5G5B`                                                                       | `IN-PI22TAT5R5G5B`                                                                                    | `T3A33BRG-H9C0002X1U1930`                                                                                     | `FZ2812-5050`                                                                                          | `IN-PI554FCH`                                                                                          | `IN-PI55QATPRPGPBPW-40`                                                                                   | `IN-PC55TBTRGB`                                                                                    | `LTST-E263CEGBK`                                                                                        | `19-C47/RSGHBHC-5V01/2T`                                                                                                  | `WS2812B-B/T`                                                                                                 | `DY-S1515065/RGBC/6805-5T`                                                                                                         | `SK6805-EC15`                                                                                                             | `SK6805-EC20`                                                                                                             |
 | ----------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -137,7 +139,7 @@
 | Cost (for 256)           | USD2.44                                                                                                                                       | USD$1.98                                                                                                                                      | USD$1.98                                                                                                                                      | USD$4.47                                                                                                                             | USD$15.76                                                                                                       |
 | Remarks                  |                                                                                                                                               |                                                                                                                                               |                                                                                                                                               |                                                                                                                                      |                                                                                                                 |
 
-### Pros
+#### Pros
 
 - Likely the simplest to implement in hardware/firmware (without external libraries)
 - Can easily understand/communicate how it works
@@ -145,14 +147,14 @@
 - Largest physical size
 - Can implement from scratch myself, without needing to buy a module
 
-### Cons
+#### Cons
 - Lots of individual LEDs for a medium-large matrix...
 - Cost?
 - Power draw—unsure of how power-hungry the other options are, but I expect this to be more power-hungry than a off-the-shelf display module
 - Far inferior pixel density/resolution
 - Heat dissipation—may require me to produce my *own* LED matrix module on an aluminium board—at which point I might want to just buy a commercial product?
 
-## LED Matrix Module/Panel
+### LED Matrix Module/Panel
 
 ![LED Matrix Panel](https://chicagodist.com/cdn/shop/products/1484-00_2048x.jpg?v=1594330893)
 
@@ -170,15 +172,15 @@
 | Cost              | USD$24.95                                                         | USD$29.95                                                         |
 | Remarks           |                                                                   |                                                                   |
 
-### Pros
+#### Pros
 
 - Primarily the same as that for a custom-built LED matrix with discrete LEDs
 - Probably cheaper than building it myself
 
-### Cons
+#### Cons
 - Don't get to do the design/layout myself
 
-## Dot Matrix Module
+### Dot Matrix Module
 
 ![Dot Matrix Module](https://m.media-amazon.com/images/I/71qBLiOKTHL._AC_UF1000,1000_QL80_.jpg)
 
@@ -196,59 +198,59 @@
 | Cost              | USD$26.85                                                                                    |
 | Remarks           | No datasheet                                                                                 |
 
-### Pros
+#### Pros
 
 - Can daisy chain together
 - Is a developed module—less need for heat considerations etc
 - No need to implement own driver circuitry
 
-### Cons
+#### Cons
 
 - Effectively the same as buying a standard LED matrix
 - Larger physical footprint
 - Likely more expensive than buying the LEDs myself
 
-## LCD Module
+### LCD Module
 
 ![LCD Module](https://docs.arduino.cc/static/7a7f1f877f04d48236ab166814aab58f/0a47e/lcd_photo.png)
 
-### Pros
+#### Pros
 
 - Cheap
 
-### Cons
+#### Cons
 
 - Can only easily display letters
 - Must fit to each segment—would not work for the maze/logo
 - Single colour
 
-## OLED Module
+### OLED Module
 
 ![OLED Module](https://m.media-amazon.com/images/I/71TyuPDzXVL.jpg)
 
-### Pros
+#### Pros
 
 - Less power draw
 - Lighter, thinner
 - Higher resolution/pixel density
 
-### Cons
+#### Cons
 
 - Small—hard to read
 - Can get expensive for larger screens/higher resolutions
 - Doesn't look very good, in my opinion
 
-## TFT Display
+### TFT Display
 
 ![TFT Display Module](https://nl.mouser.com/images/marketingid/2020/img/188257339.png)
 
-### Pros
+#### Pros
 
 - Highest resolution?
 - Easier to get in larger sizes than OLED modules
 - More cost effective
 
-### Cons
+#### Cons
 
 - Scope creep?
 - Small physical size
