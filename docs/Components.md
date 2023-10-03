@@ -295,3 +295,11 @@ If I choose to go with non-addressable LEDs, I would select:
 - This definitely looks better, but I think the maze could/should still be more readable than what it is
 - I chose to keep the row count to $15$, as this allows me to to use a single 48-channel LED driver to drive a whole $\frac{48}{3}=16$ LED column at once, where I can then multiplex through
 - As these are not addressable LEDs (ie incorporate a controller within the LED device), they do not require local decoupling—so I do not need to account for this in designing the pitch
+
+- Reducing the pitch to $1.6\,\text{mm}$, I have a $35\times21=735$ matrix
+	1. ![1615 1.6mm logo](images/1615-1.6mm-logo.png)
+	2. ![1615 1.6mm odd maze](1615-1.6mm-odd.png)
+	3. ![1615 1.6mm even maze](1615-1.6mm-even.png)
+ 
+ - I am happy with this, I think this pitch is a good balance between being realistic (assembly, pixel count—price), and being readable with a decent resolution
+ - The row/column counts of 21 and 35 have also been deliberately chosen as I can use three 36-channel (ie 12 RGB LED) drivers to drive the full row, or two 36-channel drivers to drive a full column
