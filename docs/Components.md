@@ -279,7 +279,7 @@ If I choose to go with non-addressable LEDs, I would select:
 4. [CLMVC-FKA-CL1D1L71BB7C3C3](https://www.digikey.com/en/products/detail/creeled-inc/CLMVC-FKA-CL1D1L71BB7C3C3/4794065).
 
 - Assuming I select the $1.6\,\text{mm}\times 1.5\,\text{mm}$ devices and a pin pitch of $3\,\text{mm}$, this produces a $24\times 16=384$ matrix that looks like the following:
-	1. ![[1615-3mm-logo.png]]
-	2. ![[1615-3mm-odd.png]]
-	3. ![[1615-3mm-even.png]]
+	1. ![1615 3mm logo](images/1615-3mm-logo.png)
+	2. ![1615 3mm odd maze](1615-3mm-odd.png)
+	3. ![1615 3mm even maze](1615-3mm-even.png)
 
