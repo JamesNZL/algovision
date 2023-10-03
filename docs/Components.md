@@ -93,7 +93,7 @@
 - Addressing the hardware concerns—if I employ both shifting (standard shift registers or LED drivers) and multiplexing, I am sure I can significantly cut down on the number of ICs required—it would just increase the complexity of the firmware, but that is fine, provided the clock timing requirements remain reasonable
 	- If I want to drive 8 LEDs at once, this requires $8\times 3 = 24\,\text{bits}$ required in the shift register, or 24 channels in the LED driver
 	- If I use a 48 channel LED driver, this would correspond to 16 LEDs at once
-	- Assuming a matrix of $20\times 16$, this could be one entire row at once
+	- Assuming a matrix of $20\times 16$, this could be one entire column at once
 	- I could then use a single driver and multiplex through the columns one at a time
 	- This would be very reasonable...
 	- With two drivers, I could scan through from Column 0 to Column 9 and Column 10 to Column 19, which I have seen detailed in the datasheets for the Adafruit matrices as providing a smoother visual appearance
@@ -278,8 +278,20 @@ If I choose to go with non-addressable LEDs, I would select:
 3. [`ASCB-JTC2-0A308`](https://www.digikey.com/en/products/detail/broadcom-limited/ASCB-JTC2-0A308/15181480) as it is pin compatible.
 4. [CLMVC-FKA-CL1D1L71BB7C3C3](https://www.digikey.com/en/products/detail/creeled-inc/CLMVC-FKA-CL1D1L71BB7C3C3/4794065).
 
-- Assuming I select the $1.6\,\text{mm}\times 1.5\,\text{mm}$ devices and a pin pitch of $3\,\text{mm}$, this produces a $24\times 16=384$ matrix that looks like the following:
+- Assuming I select the $1.6\,\text{mm}\times 1.5\,\text{mm}$ devices and a pitch of $3\,\text{mm}$, this produces a $24\times 16=384$ matrix that looks like the following:
 	1. ![1615 3mm logo](images/1615-3mm-logo.png)
 	2. ![1615 3mm odd maze](1615-3mm-odd.png)
 	3. ![1615 3mm even maze](1615-3mm-even.png)
 
+- I learn that, although I can double up for an even maze, I would need many more pixels (and similarly matrix size) to have enough paths
+- I do notice however that the odd maze is quite hard to read, perhaps a smaller pitch will make this better
+- I will plan on moving forward with a single-pixel line width, and design for an odd-dimensioned matrix such that gaps work out as desired
+
+- With a pitch of $2.5\,\text{mm}$, I have a $27\times 15=405$ matrix that produces
+	1. ![1615 2.5mm logo](images/1615-2.5mm-logo.png)
+	2. ![1615 2.5mm odd maze](1615-2.5mm-odd.png)
+	3. ![1615 2.5mm even maze](1615-2.5mm-even.png)
+ 
+- This definitely looks better, but I think the maze could/should still be more readable than what it is
+- I chose to keep the row count to $15$, as this allows me to to use a single 48-channel LED driver to drive a whole $\frac{48}{3}=16$ LED column at once, where I can then multiplex through
+- As these are not addressable LEDs (ie incorporate a controller within the LED device), they do not require local decoupling—so I do not need to account for this in designing the pitch
