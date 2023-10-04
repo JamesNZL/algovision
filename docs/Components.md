@@ -306,3 +306,38 @@ If I choose to go with non-addressable LEDs, I would select:
 
  - In terms of the driving mechanism, my first idea would be to use the below topology, with three 36-channel drivers to drive all the columns at once, and scan through the 21 rows with a set of three 8-bit shift registers chained together
 	 - ![12-11-12 by 21](images/12-11-12-by-21.png)
+
+- My next step will be to part out the LED drivers and shift registers that I want to use
+- A potential improvement (scan-wise) would be to add three more drivers such that I can split the rows in half, and display two whole rows at once (ie scanning through two lines at once), which would improve the refresh/scan rate of the display, at a cost of component count/cost/driver frequency
+
+- As I am just wanting to scan through the rows one after another and do not need to load some arbitrary data into the shift register before enabling the output all at once, I will not need an output storage register
+	- I can simply write the next bit into the shift register once I am ready to scan to the next row, as I only expect the shift register to contain a single `1` at any given instant
+ - I also do not need a tri-state output, as the shift register output will be the only thing connected to the common anode pins (probably through a buffer transistor)
+
+- From the LED driver perspective—I may want to use more drivers simply such that each driver is controlling less than 32 channels, so that I can represent it using a `uin32_t` rather than needing to use a whole `uint64_t` and wasting 28 bits
+	```c
+#define DISPLAY_TOTAL_ROWS 35  
+#define DISPLAY_TOTAL_COLUMNS 21  
+#define DISPLAY_PIXEL_TOTAL_CHANNELS 3  
+  
+typedef uint128_t row_t;  
+typedef uint32_t column_t;  
+  
+#define DISPLAY_DRIVER_TOTAL_ONE 12 * DISPLAY_PIXEL_TOTAL_CHANNELS  
+#define DISPLAY_DRIVER_TOTAL_TWO 11 * DISPLAY_PIXEL_TOTAL_CHANNELS  
+#define DISPLAY_DRIVER_TOTAL_THREE 12 * DISPLAY_PIXEL_TOTAL_CHANNELS  
+  
+typedef uint64_t driver_t; // !
+  
+row_t currentRow = 0b010/* ... */001;  
+  
+driver_t driverOne = (currentRow <<= DISPLAY_DRIVER_TOTAL_ONE);  
+driver_t driverTwo = (currentRow <<= DISPLAY_DRIVER_TOTAL_TWO);  
+driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
+```
+- Another option I have is to reduce the column count from 35 to 31, producing a more square matrix
+	- ![1615 1.6mm reduced logo](images/1615-1.6mm-reduced-logo.png)
+	- I'm not sure how I feel about this, I think I will pursue the alternative of simply using more drivers for the time being
+	- This may work out to be the better decision regardless, as I would expect 24-channel drivers to be easier to source than 48-channel drivers
+	- Furthermore, a quick cursory search on DigiKey suggests that 24-channel drivers can be found that sink significantly more ($60\,\text{mA}$ vs $30\,\text{mA}$) current than 48-channel drivers
+	- Also, although I can find 36-channel drivers, I can only find them in quad flat packages (and with less current capability), whilst I'd prefer a SOP package for routing/aesthetics
