@@ -5,6 +5,7 @@
 		"clang",
 		"actions",
 		"assets",
-		"pcb"
+		"pcb",
+		"display"
 	]
 }

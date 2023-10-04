@@ -262,7 +262,7 @@
 ## Layout Design
 
 > [!todo] Requirements
-> - [ ] Minimum resolution of $20\times 15$
+> - [x] Minimum resolution of $20\times 15$
 
 ### Selected Devices
 
@@ -280,8 +280,8 @@ If I choose to go with non-addressable LEDs, I would select:
 
 - Assuming I select the $1.6\,\text{mm}\times 1.5\,\text{mm}$ devices and a pitch of $3\,\text{mm}$, this produces a $24\times 16=384$ matrix that looks like the following:
 	1. ![1615 3mm logo](images/1615-3mm-logo.png)
-	2. ![1615 3mm odd maze](1615-3mm-odd.png)
-	3. ![1615 3mm even maze](1615-3mm-even.png)
+	2. ![1615 3mm odd maze](images/1615-3mm-odd.png)
+	3. ![1615 3mm even maze](images/1615-3mm-even.png)
 
 - I learn that, although I can double up for an even maze, I would need many more pixels (and similarly matrix size) to have enough paths
 - I do notice however that the odd maze is quite hard to read, perhaps a smaller pitch will make this better
@@ -289,8 +289,8 @@ If I choose to go with non-addressable LEDs, I would select:
 
 - With a pitch of $2.5\,\text{mm}$, I have a $27\times 15=405$ matrix that produces
 	1. ![1615 2.5mm logo](images/1615-2.5mm-logo.png)
-	2. ![1615 2.5mm odd maze](1615-2.5mm-odd.png)
-	3. ![1615 2.5mm even maze](1615-2.5mm-even.png)
+	2. ![1615 2.5mm odd maze](images/1615-2.5mm-odd.png)
+	3. ![1615 2.5mm even maze](images/1615-2.5mm-even.png)
  
 - This definitely looks better, but I think the maze could/should still be more readable than what it is
 - I chose to keep the row count to $15$, as this allows me to to use a single 48-channel LED driver to drive a whole $\frac{48}{3}=16$ LED column at once, where I can then multiplex through
@@ -298,8 +298,11 @@ If I choose to go with non-addressable LEDs, I would select:
 
 - Reducing the pitch to $1.6\,\text{mm}$, I have a $35\times21=735$ matrix
 	1. ![1615 1.6mm logo](images/1615-1.6mm-logo.png)
-	2. ![1615 1.6mm odd maze](1615-1.6mm-odd.png)
-	3. ![1615 1.6mm even maze](1615-1.6mm-even.png)
+	2. ![1615 1.6mm odd maze](images/1615-1.6mm-odd.png)
+	3. ![1615 1.6mm even maze](images/1615-1.6mm-even.png)
  
  - I am happy with this, I think this pitch is a good balance between being realistic (assembly, pixel count—price), and being readable with a decent resolution
  - The row/column counts of 21 and 35 have also been deliberately chosen as I can use three 36-channel (ie 12 RGB LED) drivers to drive the full row, or two 36-channel drivers to drive a full column
+
+ - In terms of the driving mechanism, my first idea would be to use the below topology, with three 36-channel drivers to drive all the columns at once, and scan through the 21 rows with a set of three 8-bit shift registers chained together
+	 - ![12-11-12 by 21](images/12-11-12-by-21.png)
