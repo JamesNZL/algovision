@@ -314,7 +314,7 @@ If I choose to go with non-addressable LEDs, I would select:
 	- I can simply write the next bit into the shift register once I am ready to scan to the next row, as I only expect the shift register to contain a single `1` at any given instant
  - I also do not need a tri-state output, as the shift register output will be the only thing connected to the common anode pins (probably through a buffer transistor)
 
-- From the LED driver perspective—I may want to use more drivers simply such that each driver is controlling less than 32 channels, so that I can represent it using a `uin32_t` rather than needing to use a whole `uint64_t` and wasting 28 bits (for a total of 84 bits)
+- From the LED driver perspective—I may want to use more drivers simply such that each driver is controlling less than 32 channels, so that I can represent it using a `uint32_t` rather than needing to use a whole `uint64_t` and wasting 28 bits (for a total of 87 wasted bits)
 	```c
 #define DISPLAY_TOTAL_ROWS 35  
 #define DISPLAY_TOTAL_COLUMNS 21  
@@ -344,7 +344,7 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 	
 > [!todo]
 > - [x] Finish researching shift registers
-> - [ ] Finish 5-3 matrix topology mockup
+> - [x] Finish 5-3 matrix topology mockup
 > - [ ] Select an LED driver and determine whether 5-3 topology is feasible (current is likely the deciding factor)
 
 | Part Number             | `SN74HCS264PWR`                                                                                              | `SN74HCS264DR`                                                                                             | `SN74HCS595PWR`                                                                                              | `74VHC9164FT`                                                                                                  | `SN74HCS594PWR`                                                                                              | `SN74HCS594DYYR`                                                                                             | `SN74HCS596PWR`                                                                                              | `74VHC164FT`                                                                                                  | `SN74HC164PWR`                                                                                              |
@@ -371,3 +371,11 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 
 > [!success] Preferred Device
 > The best device seems to be the [`SN74HCS594PWR`](https://www.digikey.com.au/en/products/detail/texas-instruments/SN74HCS594PWR/13532304) with its shift & storage clocks tied together—so I will move forward with this
+
+- Adding two extra LED drivers, I realise I can improve the distribution per IC to be 7 columns per 24-channel LED driver, and 7 rows per shift register—this gives me an even distribution per IC
+	 - ![7-7-7-7-7 by 21](images/7-7-7-7-7-by-21.png)
+	 - This *may* make the shift registers more difficult to arrange (at least with an output register), as I cannot directly chain them together without skipping a row (due to the 8th bit not being used)
+	 - This should just be a case of connecting one of the earlier parallel outputs to the input of the next shift register, but I will just need to follow the timing/clock cycles detailed in the datasheet
+	 - This topology has an advantage of a better distribution of current per IC, making it easier to stay below the current limits
+	 - This topology still wastes bits (55 bits), but this is better than the 87 bits of the previous arrangement—it also uses a 32 bit integer instead of a 64 bit integer, which would be preferred if the microcontroller I use has a core width of 32 bits
+  
