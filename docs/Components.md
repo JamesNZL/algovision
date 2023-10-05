@@ -264,13 +264,11 @@
 > [!todo] Requirements
 > - [x] Minimum resolution of $20\times 15$
 
-### Selected Devices
-
-#### Addressable LEDs
+### Addressable LEDs
 
 If I choose to go with addressable LEDs, I would select the [`WS2812B-B/T`](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Worldsemi-WS2812B-B-T_C2761795.html) for price and solderability.
 
-#### Non-Addressable LEDs
+### Non-Addressable LEDs
 
 If I choose to go with non-addressable LEDs, I would select:
 1. [`RS-1515MBAM`](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Foshan-NationStar-Optoelectronics-RS-1515MBAM_C727906.html), for price, lens, and forward current.
@@ -342,7 +340,7 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 	- Furthermore, a quick cursory search on DigiKey suggests that 24-channel drivers can be found that sink significantly more ($60\,\text{mA}$ vs $30\,\text{mA}$) current than 48-channel drivers
 	- Also, although I can find 36-channel drivers, I can only find them in quad flat packages (and with less current capability), whilst I'd prefer a SOP package for routing/aesthetics
 	
-##### Shift Registers
+#### Shift Registers
 
 | Part Number             | `SN74HCS264PWR`                                                                                                | `SN74HCS264DR`                                                                                               | `SN74HCS595PWR`                                                                                                | `74VHC9164FT`                                                                                                  | `SN74HCS594PWR`                                                                                                | `SN74HCS594DYYR`                                                                                               | `SN74HCS596PWR`                                                                                                | `74VHC164FT`                                                                                                  | `SN74HC164PWR`                                                                                                |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -376,7 +374,7 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 	 - This topology has an advantage of a better distribution of current per IC, making it easier to stay below the current limits
 	 - This topology still wastes bits (55 bits), but this is better than the 87 bits of the previous arrangement—it also uses a 32 bit integer instead of a 64 bit integer, which would be preferred if the microcontroller I use has a core width of 32 bits
 
-##### LED Drivers
+#### LED Drivers
 
   - For my LED drivers, I probably want a shift register topology so that I can drive them all from a single data line
 > [!warning]
@@ -414,3 +412,61 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 
 - These selections give me the following matrix layout:
 	 - ![7-7-7-7-7 by 21 with parts](images/7-7-7-7-7-by-21-parts.png)
+
+> [!todo]
+> - [ ] Work out the minimum data frequency if I want a refresh rate of $\geq 60\,\text{Hz}$
+> - [ ] Work out the worst-case current if all LEDs in a row are at full brightness white—this cannot be sourced by the shift register, so I must design a current amplifier stage
+> - [ ] Refer to the [`TLC5955`](https://www.digikey.co.nz/en/products/detail/texas-instruments/TLC5955DCAR/5181329) and [`TLC5947`](https://www.digikey.co.nz/en/products/detail/texas-instruments/TLC5947DAPR/2047743) datasheets for guidance on design procedure/power supply recommendations etc.
+
+#### Design Parameters
+
+##### Maximum output constant-current per channel
+
+`9.4.1`
+
+> [!todo] Maximum Current `IREF`
+> Select the maximum constant sink-current value to be greater than the maximum continuous output current of each channel.
+
+##### Maximum LED forward voltage
+
+
+
+> [!todo] Power Supply Regulation
+> The $V_\text{LED}$ must be set to the voltage calculated by
+> $$
+> V_\text{LED} \gt V_\text{F}+0.4\,\text{V}
+> $$
+
+##### Current ratio of R/G/B for best white balance
+
+`9.4.3`
+
+> [!todo] White Balance Global Brightness Control
+> Select the `BC` data for the best white balance of the RGB channels and write the data with other control data.
+
+##### Current ratio of R/G/B for best uniformity
+
+`9.4.2`
+
+> [!todo] Uniformity Dot Correction
+> Select the `DC` data for the best uniformity of the RGB channels and write the data with other control data.
+
+##### Pixel brightness
+
+`9.4.4`
+
+> [!todo] Brightness Grayscale
+> Select the `GS` data of the RGB intensity and colour control and write the data with other `GS` data.
+
+##### Additional features
+
+###### Auto Display Repeat
+
+- When disabled, each output driver is turned on and off once after `XBLNK` goes `HIGH`
+- When enabled, each output driver is repeatedly toggled on and off
+
+###### Display Timing Reset
+
+- When disabled, the `GS` counter is not reset and no outputs are forced off even if a `GSLAT` rising edge is input. In this mode, the `XBLNK` signal should be input after the PWM control of all LEDs is finished.
+
+- When enabled, the `GS` counter is reset to `0` and all outputs are forced off at the `GSLAT` rising edge for a `GS` data write. PWM control starts again from the next input `GSCKR`, `GSCKG`, or `GSCKB` rising edge.
