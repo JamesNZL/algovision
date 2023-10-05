@@ -11,3 +11,15 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 > [!IMPORTANT]  
 > This directory mirrors the files within my Obsidian vault.  
 > Not all Markdown is supported by the `GitHub Flavoured Markdown Spec`, and thusly may not render correctly.
+
+## Software Used
+
+| Package             | Used for                                          |
+| ------------------- | ------------------------------------------------- |
+| Obsidian            | The scratch pad for documentation and design.     |
+| Concepts            | The rough sketches and ideation.                  |
+| Visual Studio Code  | The text editing and firmware development.        |
+| Altium Designer     | The schematic capture and PCB artwork.            |
+| Autodesk Fusion 360 | The 3D models of components.                      | 
+| Figma               | The iterative matrix mockups and topology design. |
+| Adobe Illustrator   | The algovision logo.                              |
