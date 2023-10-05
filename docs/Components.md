@@ -315,7 +315,7 @@ If I choose to go with non-addressable LEDs, I would select:
  - I also do not need a tri-state output, as the shift register output will be the only thing connected to the common anode pins (probably through a buffer transistor)
 
 - From the LED driver perspective—I may want to use more drivers simply such that each driver is controlling less than 32 channels, so that I can represent it using a `uint32_t` rather than needing to use a whole `uint64_t` and wasting 28 bits (for a total of 87 wasted bits)
-	```c
+```c
 #define DISPLAY_TOTAL_ROWS 35  
 #define DISPLAY_TOTAL_COLUMNS 21  
 #define DISPLAY_PIXEL_TOTAL_CHANNELS 3  
