@@ -342,10 +342,7 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 	- Furthermore, a quick cursory search on DigiKey suggests that 24-channel drivers can be found that sink significantly more ($60\,\text{mA}$ vs $30\,\text{mA}$) current than 48-channel drivers
 	- Also, although I can find 36-channel drivers, I can only find them in quad flat packages (and with less current capability), whilst I'd prefer a SOP package for routing/aesthetics
 	
-> [!todo]
-> - [x] Finish researching shift registers
-> - [x] Finish 5-3 matrix topology mockup
-> - [ ] Select an LED driver and determine whether 5-3 topology is feasible (current is likely the deciding factor)
+##### Shift Registers
 
 | Part Number             | `SN74HCS264PWR`                                                                                                | `SN74HCS264DR`                                                                                               | `SN74HCS595PWR`                                                                                                | `74VHC9164FT`                                                                                                  | `SN74HCS594PWR`                                                                                                | `SN74HCS594DYYR`                                                                                               | `SN74HCS596PWR`                                                                                                | `74VHC164FT`                                                                                                  | `SN74HC164PWR`                                                                                                |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -378,6 +375,8 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 	 - This should just be a case of connecting one of the earlier parallel outputs to the input of the next shift register, but I will just need to follow the timing/clock cycles detailed in the datasheet
 	 - This topology has an advantage of a better distribution of current per IC, making it easier to stay below the current limits
 	 - This topology still wastes bits (55 bits), but this is better than the 87 bits of the previous arrangement—it also uses a 32 bit integer instead of a 64 bit integer, which would be preferred if the microcontroller I use has a core width of 32 bits
+
+##### LED Drivers
 
   - For my LED drivers, I probably want a shift register topology so that I can drive them all from a single data line
 > [!warning]
