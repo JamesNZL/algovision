@@ -1,6 +1,6 @@
 ## Logo Variants
 
-| Filename                                   | Preview                                     | Usage                                                                                                                     |
+| Filename                                   | Preview                                     | Remarks                                                                                                                   |
 | ------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | [`logo.svg`](./logo.svg)                   | ![`logo.svg`](./logo.svg)                   | The full original design file.                                                                                            |
 | [`logo-animated.svg`](./logo-animated.svg) | ![`logo-animated.svg`](./logo-animated.svg) | An animated variant.                                                                                                      |
