@@ -2,7 +2,7 @@
 
 # Design Parameters
 
-- [[Minimum Drive Frequency]]
+- [[Minimum Data Frequency]]
 - [[Maximum Output Constant-Current]]
 - [[Maximum LED Forward Voltage]]
 - [[White Balance]]
