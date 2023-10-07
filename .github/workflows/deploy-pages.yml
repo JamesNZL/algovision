@@ -1,4 +1,4 @@
-name: Mirror Pages
+name: Deploy Pages
 
 permissions:
   contents: read
@@ -9,7 +9,7 @@ on:
   push:
     paths:
     - 'docs/static/**.html'
-    - '.github/workflows/mirror-pages.yml'
+    - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
     
 concurrency:
@@ -22,12 +22,21 @@ jobs:
     environment:
       name: docs
       url: ${{ steps.deployment.outputs.page_url }}
+        
+    defaults:
+      run:
+        working-directory: docs
+
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
+        
       - uses: actions/configure-pages@v3
+
       - uses: actions/upload-pages-artifact@v2
         with:
           path: docs/static
+
       - uses: actions/deploy-pages@v2
         id: deployment

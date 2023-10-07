@@ -43,3 +43,6 @@ OldVersions/
 
 ## Ignore temporary files
 *.tmp
+
+## Ignore Obsidian vault configuration files
+.obsidian/

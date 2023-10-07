@@ -1,1 +1,1 @@
-let nodes={paths:[],nodeCount:0,linkSources:[],linkTargets:[],labels:[],radii:[],linkCount:0},attractionForce=1,linkLength=10,repulsionForce=150,centralForce=3,edgePruning=100
+let nodes={paths:["components.html","features.html","goals.html","index.html","specifications.html"],nodeCount:5,linkSources:[1,1,3,3,3,3],linkTargets:[2,4,2,4,1,0],labels:["Components","Features","Goals","Index","Specifications"],radii:[5.109375,6.984375,6.4375,7,6.4375],linkCount:6},attractionForce=1,linkLength=10,repulsionForce=150,centralForce=3,edgePruning=100
