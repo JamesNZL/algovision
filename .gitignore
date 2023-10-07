@@ -46,3 +46,4 @@ OldVersions/
 
 ## Ignore Obsidian vault configuration files
 .obsidian/
+.obsidian*
