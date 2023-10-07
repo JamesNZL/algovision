@@ -35,7 +35,7 @@ jobs:
       - shell: bash
         run: |
           # * rename Index to Home
-          find static/ -type f | xargs sed -i  's/>Index</>Home</g'
+          find static/ -type f | xargs sed -i  's/>Index</>0 — Home</g'
 
       - uses: actions/configure-pages@v3
 

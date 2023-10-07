@@ -3,7 +3,7 @@
 # Scopes
 
 > [!IMPORTANT]  
-> See also [[Goals]] and [[Specifications]]
+> See also [[1 —  Goals]] and [[2 — Specifications]]
 
 ---
 

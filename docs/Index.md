@@ -10,9 +10,9 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 
 ## Pages
 
-[[Goals]]  
-[[Specifications]]  
-[[Scopes]]  
+[[1 —  Goals]]  
+[[2 — Specifications]]  
+[[3 — Scopes]]  
 
 ## Software Used
 
