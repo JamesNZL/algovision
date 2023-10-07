@@ -36,7 +36,14 @@ jobs:
         run: |
           # * rename home to index
           mv static/0-—-home.html static/index.html
-          find static/ -type f | xargs sed -i  's/0-—-home.html/index.html/g'
+          find static/ -type f | xargs sed -i 's/0-—-home.html/index.html/g'
+          
+          # * remove serials from filename
+          for f in *.html
+          do
+            mv $f $(echo $f | sed -e 's/^[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g')
+          done
+          find static/ -type f | xargs sed -i 's/^[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g'
 
       - uses: actions/configure-pages@v3
 
