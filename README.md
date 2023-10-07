@@ -27,7 +27,8 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 
 ## Project Documentation
 
-Visit the [GitHub Pages deployment](https://docs.jamesnzl.xyz/algovision) to view this project's documentation.
+> [!important]
+> Visit the [GitHub Pages deployment](https://docs.jamesnzl.xyz/algovision) to view this project's documentation.
 
 ## Software Used
 
