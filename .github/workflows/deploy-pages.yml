@@ -41,7 +41,7 @@ jobs:
           # * remove serials from filename
           for f in *.html
           do
-            mv $f $(echo $f | sed -e 's/^[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g')
+            mv -n $f $(echo $f | sed -e 's/^[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g')
           done
           find ./ -type f | xargs sed -i 's/^[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g'
 
