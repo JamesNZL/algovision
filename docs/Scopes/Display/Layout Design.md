@@ -69,7 +69,9 @@ driver_t driverThree = (currentRow <<= DISPLAY_DRIVER_TOTAL_THREE);
 	- Furthermore, a quick cursory search on DigiKey suggests that 24-channel drivers can be found that sink significantly more ($60\,\text{mA}$ vs $30\,\text{mA}$) current than 48-channel drivers
 	- Also, although I can find 36-channel drivers, I can only find them in quad flat packages (and with less current capability), whilst I'd prefer a SOP package for routing/aesthetics
 
-Having selected my [[Shift Registers]] and [[LED Drivers]], I will now work through the following design tasks to determine my matrix [[Design Parameters]]:
+Having selected my [[Shift Registers]] and [[LED Drivers]] to produce the final layout shown below, I will now work through the below design tasks to determine my matrix [[Design Parameters]].
+	 ![7-7-7-7-7 by 21 with parts](images/7-7-7-7-7-by-21-parts.png)
+  
 > [!todo]
 > - [x] Work out the minimum data frequency if I want a refresh rate of $\geq 60\,\text{Hz}$
 > - [ ] Work out the worst-case current if all LEDs in a row are at full brightness white—this cannot be sourced by the shift register, so I must design a current amplifier stage
