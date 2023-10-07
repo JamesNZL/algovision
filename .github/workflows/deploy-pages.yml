@@ -43,7 +43,7 @@ jobs:
           do
             mv -n $f $(echo $f | sed -e 's/^[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g')
           done
-          find ./ -type f | xargs sed -i 's/^[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g'
+          find ./ -type f | xargs sed -i 's/[0-9]\+-—-\([^\.]\+\)\.html/\1.html/g'
 
       - uses: actions/configure-pages@v3
 
