@@ -9,15 +9,7 @@
 A self-driven project to design an algorithm visualisation tool with a union of hardware and firmware.
 
 > [!IMPORTANT]  
-> This directory mirrors the files within my Obsidian vault.  
+> This directory mirrors the raw Markdown files within my Obsidian vault.  
 > Not all Markdown is supported by the `GitHub Flavoured Markdown Spec`, and thusly may not render correctly.
-
-## Pages
-
-> [!NOTE]  
-> These pages are mirrored to the [repository wiki](https://github.com/JamesNZL/algovision/wiki).
-
-[[Goals]]  
-[[Specifications]]  
-[[Features]]  
-[[Components]]  
+>
+> Visit this repository's [GitHub Pages deployment](https://docs.jamesnzl.xyz/algovision) to view the statically rendered Markdown.
