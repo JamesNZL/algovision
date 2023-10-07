@@ -12,8 +12,7 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 
 [[Goals]]  
 [[Specifications]]  
-[[Features]]  
-[[Components]]  
+[[Scopes]]  
 
 ## Software Used
 

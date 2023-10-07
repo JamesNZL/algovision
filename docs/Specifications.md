@@ -1,5 +1,7 @@
 #5e5ce6/projects 
 
+# Specifications
+
 > [!NOTE]  
 > This document lists the specifications that the outcome must satisfy.
 
@@ -11,20 +13,20 @@
 
 3. The outcome must be aesthetically pleasing.
 
-4. The outcome must be power efficient and battery powered.
+4. The outcome must be [[power]] efficient and [[Batteries|battery]] powered.
 
-5. The outcome must be capable of an auto-sleep/shutdown if left unattended.
+5. The outcome must be capable of an [[Auto-Shutdown|auto-sleep/shutdown]] if left unattended.
 
-6. The outcome must be easily programmed using a USB Type C connector.
+6. The outcome must be easily programmed using a [[Scopes/Micro/USB Connector|USB Type C connector]].
 
-7. The outcome must be effective towards its goal of aiding in the visualisation of different sorting and pathfinding/search algorithms.
+7. The outcome must be effective towards its goal of aiding in the visualisation of different [[sorting]] and [[pathfinding]]/[[search]] [[algorithms]].
 
 8. The outcome must be self-contained, and must not be reliant on any extraneous supplies/loads/test environments/etc.
 
-9. The outcome must have operating modes to either single-step through an algorithm, or automatically execute at a configurable rate.
+9. The outcome must have [[Scopes/Interface/Operating Modes|operating modes]] to either single-step through an algorithm, or automatically execute at a configurable rate.
 
-10. The outcome must have power indicator LEDs to notify the user when the batteries have discharged too far.
+10. The outcome must have [[Scopes/Power/Power Indicator|power indicator]] LEDs to notify the user when the batteries have [[Scopes/Power/Battery Voltage Sensing|discharged too far]].
 
-11. The outcome must include debug pins/test points and LEDs to facilitate effective development and debugging.
+11. The outcome must include [[Scopes/Interface/Debug LEDs|debug]] pins/test points and LEDs to facilitate effective development and debugging.
 
-12. The outcome should be easy to operate, with minimal end-user input required.
+12. The outcome should be easy to operate, with minimal [[Interface|end-user input]] required.
