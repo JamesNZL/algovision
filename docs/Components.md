@@ -446,17 +446,11 @@ $$
 I am interested in finding both a reasonable minimum data drive frequency for my LED drivers, as well as a reasonable minimum PWM greyscale frequency. I will first focus on the data drive frequency, by making the assumption that, within the $0.8\,\text{ms}$ I have for each row before progressing to the next, the time taken to configure the output for that row should be significantly less than the on time for the pixels—ie $t_\text{row setup} \ll t_\text{row}$. Making the assumption that this 'significantly less than' is an order of magnitude (acknowledging that this setup can be done whilst the previous row is still being shown), we find that
 $$
 \begin{align}
-
 t_\text{row setup} & \lt \frac{t_\text{row}}{10} \\[0.75em]
-
 & \lt \frac{\frac{1}{f_\text{refresh}\times n_\text{rows}}}{10} \\[0.75em]
-
 & \lt \frac{1}{10\times f_\text{refresh}\times n_\text{rows}} \\[0.75em]
-
 & \lt \frac{1}{12600}\\[1em]
-
 & \lt 79.37\,\micro\text{s}
-
 \end{align}
 $$
 
@@ -482,17 +476,13 @@ $$
 
 This tells me that, in order to achieve a refresh rate of $f_\text{refresh} \geq 60\,\text{Hz}$ with my $1:21$ scan rate, I will need a `GSSCK` data frequency of at least $3.640\,\text{MHz}$. This is encouraging, as the selected `TLC5951` driver supports up to $30\,\text{MHz}$, affording me an order of magnitude within which to find an optimal balance between refresh rate/visual flicker and signal integrity/computational demand.
 
-Taking this maximum $30\,\text{MHz}$ data drive frequency to find the maximum achievable refresh rate $f_\text{refresh}$, we find $$
+Taking this maximum $30\,\text{MHz}$ data drive frequency to find the maximum achievable refresh rate $f_\text{refresh}$, we find
+$$
 \begin{align}
-
 \frac{1}{10\times f_\text{refresh}\times n_\text{rows}} & \gt \frac{288}{f_\text{clk}} + 240\,\text{ns} \\[0.75em]
-
 \frac{1}{10\times n_\text{rows}\times \left(\frac{288}{f_\text{clk}}+240\,\text{ns}\right)} & \gt f_\text{refresh} \\[0.75em]
-
 f_\text{refresh} & \lt \frac{1}{10\times 21 \times \left(\frac{288}{30\times 10^6}+\left(240\times 10^{-9}\right)\right)}\\[1em]
-
 & \lt 483.933\,\text{Hz}
-
 \end{align}
 $$
 
@@ -501,21 +491,13 @@ This is encouraging, as it tells me that my matrix topology/scan regime should b
 For completeness, to find a reasonable minimum PWM greyscale frequency, I will make the assumption that I want at least an `8-bit` ($256$ counts) resolution to my PWM counter. This requires $256$ intervals over the period for which each row is on, ie
 $$
 \begin{align}
-
 t_\text{greyscale} & \lt \frac{t_\text{row}}{256} \\[0.75em]
-
 & \lt \frac{\frac{1}{f_\text{refresh}\times n_\text{row}}}{256} \\[0.75em]
-
 & \lt \frac{1}{256\times f_\text{refresh} \times n_\text{row}} \\[0.75em]
-
 f_\text{greyscale} & \geq \frac{1}{t_\text{greyscale}} \\[1em]
-
 & \geq 256 \times f_\text{refresh} \times n_\text{row} \\[0.5em]
-
 & \geq 256\times 60\times 21 \\[0.5em]
-
 & \geq 322.56\,\text{kHz}
-
 \end{align}
 $$
 
