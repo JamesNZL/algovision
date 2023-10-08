@@ -2,7 +2,7 @@
 
 # Figma
 
-- Used for to mock-up and design the matrix topology.
+- Used to mock-up and design the matrix topology.
 
 ![[Pasted image 20231008235531.png]]
 
