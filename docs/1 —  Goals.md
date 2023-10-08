@@ -9,7 +9,7 @@
 
 1. To complete a project that envelops hardware, firmware, and (possibly) software design
 
-2. to revise data structures/[[algorithms]] and visualise common [[sorting]] and [[pathfinding]]/[[search]] algorithms in an easily-understood manner
+2. To revise data structures/[[algorithms]] and visualise common [[sorting]] and [[pathfinding]]/[[search]] algorithms in an easily-understood manner
 
 3. To revise [[Scopes/Micro/Microcontroller|microcontroller]] concepts and available peripherals—eg timers/counters, GPIOs, serial communication, shift registers/multiplexing for matrix displays, etc.
 
