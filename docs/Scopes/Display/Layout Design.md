@@ -5,6 +5,9 @@
 > [!todo] Requirements
 > - [x] Minimum resolution of $20\times 15$
 
+- I will use [[Figma]] to make these mock-ups, as I can easily create a component for the LED and the the auto-layout tool to create the desired grid for the matrix
+	![[Pasted image 20231008235531.png]]
+
 - Assuming I select the $1.6\,\text{mm}\times 1.5\,\text{mm}$ devices and a pitch of $3\,\text{mm}$, this produces a $24\times 16=384$ matrix that looks like the following:
 	![1615 3mm logo](images/1615-3mm-logo.png)
 	![1615 3mm odd maze](images/1615-3mm-odd.png)

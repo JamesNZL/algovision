@@ -21,7 +21,7 @@ First, I will begin by doing a [[Parts Selection]] by comparing different option
 
 Having evaluated the different options I can elect to go with, I have decided to proceed with a [[Discrete LED Matrix]], and specifically the preferred devices identified in [[Discrete Non-Addressable RGB LEDs]].
 
-Having done my parts selection, I will move on to a [[Layout Design]] using my selected devices to design the matrix layout and topology itself.
+Having done my parts selection, I will move on to a [[Layout Design]] in [[Figma]] using my selected devices to design the matrix layout and topology itself.
 
 After choosing my [[Shift Registers]] and [[LED Drivers]] to drive my matrix, I will work through determining the [[Design Parameters]] that I will need to know in order to use the selected LED driver.
 
