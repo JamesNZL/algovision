@@ -8,7 +8,7 @@ permissions:
 on:
   push:
     paths:
-    - 'docs/static/**.html'
+    - 'docs/static/**'
     - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
     
