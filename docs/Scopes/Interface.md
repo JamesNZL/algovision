@@ -4,8 +4,7 @@
 
 - [[Scopes/Interface/Operating Modes]]
 - [[Scopes/Interface/User Pushbuttons]]
-- [[Scopes/Interface/Debug LEDs]]
-- [[Scopes/Interface/Status Indicators]]
+- [[Debug LEDs]]
 
 - How is the user expected to select each mode/algorithm?
 	- Have 'mode' LEDs that indicate the current mode?
