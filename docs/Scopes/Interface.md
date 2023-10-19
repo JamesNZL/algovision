@@ -3,7 +3,7 @@
 # Interface
 
 - [[Scopes/Interface/Operating Modes]]
-- [[Scopes/Interface/User Pushbuttons]]
+- [[User Pushbuttons]]
 - [[Debug LEDs]]
 
 - How is the user expected to select each mode/algorithm?

@@ -8,6 +8,7 @@
 	1. [[Scopes/Power/Power Indicator|Power LED]]
 	2. [[Heartbeat LED]]
 	3. [[Scopes/Interface/Fault code LED]] (maybe with colour?)
+	4. [[Scopes/Interface/TX and RX LEDs]]
 
 - How do I plan on driving these?
 	- Ideally I want these to be as simple as possible (ie directly to a GPIO, rather than through even an IO expander like a shift register)
