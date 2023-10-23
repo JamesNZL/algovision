@@ -10,6 +10,8 @@
 	3. [[Scopes/Interface/Fault code LED]] (maybe with colour?)
 	4. [[Scopes/Interface/TX and RX LEDs]]
 
+- How many debug/status LEDs do I *really* need?
+
 - How do I plan on driving these?
 	- Ideally I want these to be as simple as possible (ie directly to a GPIO, rather than through even an IO expander like a shift register)
 	- This is to make debugging as easy as possible/as informative as possible—the LED will come on as soon as I toggle the GPIO
@@ -20,6 +22,7 @@
 - Do I want them to be single-colour, or RGB?
 	- If they are RGB, I can reuse the same [[Discrete Non-Addressable RGB LEDs|BOM component]] as for my matrix—part consolidation & order quantity advantages
 	- But, if they are RGB, then they will require more data lines (if I want a simple drive method)
-	- I will also need individual current-limiting resistors, and I will only be able to produce the few colour permutations of pure R/G/B
+	- I will also need individual current-limiting resistors, and I will only be able to produce the few colour permutations of pure R/G/B (unless I use PWM)
+	- Alternatively, I can use addressable LEDs for my status LEDs?
 	- If I use a single-colour LED, I only require a single GPIO pin
 	- But I will need to have a whole extra part number
