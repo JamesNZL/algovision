@@ -65,6 +65,31 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JZZECZJL
 
+[Document2]
+DocumentPath=Power.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JOHNJIVJ
+
+[Parameter1]
+Name=
+Value=
+
+[Parameter2]
+Name=ProjectRevision
+Value=v0.0.0
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -793,6 +818,15 @@ Type118=1
 Type119=1
 Type120=1
 Type121=1
+Type122=1
+Type123=1
+Type124=1
+Type125=1
+Type126=1
+Type127=1
+Type128=1
+Type129=1
+Type130=1
 
 [Difference Levels]
 Type1=1
@@ -864,6 +898,11 @@ Type66=1
 Type67=1
 Type68=1
 Type69=1
+Type70=1
+Type71=1
+Type72=1
+Type73=1
+Type74=1
 
 [Electrical Rules Check]
 Type1=1
