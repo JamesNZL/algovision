@@ -13,4 +13,5 @@
 - [[Interface]] and User Input 
 - [[Display]]
 - [[Microcontroller and Programming]]
+- [[Firmware]]
 - [[Algorithms]]
