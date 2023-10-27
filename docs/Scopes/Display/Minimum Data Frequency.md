@@ -5,7 +5,7 @@
 > [!question]
 > What is the minimum drive for a $60\,\text{Hz}$ refresh rate?
 
-For a display refresh frequency of $f_{\text{refresh}} \geq 60\,\text{Hz}$, I must scan through all $21$ rows $60$$ times a second. This gives me a minimum row frequency of
+For a display refresh frequency of $f_{\text{refresh}} \geq 60\,\text{Hz}$, I must scan through all $21$ rows $60$ times a second. This gives me a minimum row frequency of
 $$
 \begin{align}
 f_\text{row refresh} & \geq f_\text{refresh}\times n_\text{rows} \\[0.5em]
