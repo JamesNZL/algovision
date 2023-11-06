@@ -33,12 +33,6 @@
 > [!success] Preferred Device
 > The best device seems to be the [`TLC5951DAP`](https://www.digikey.co.nz/en/products/detail/texas-instruments/TLC5951DAP/2187574) due to its maximum output current and brightness/dimming controls/data frequency. If I find that $4\,\text{MHz}$ is sufficient for my data frequency, the [`TLC6C5724QDAPRQ1`](https://www.digikey.co.nz/en/products/detail/texas-instruments/TLC6C5724QDAPRQ1/9608023) may be the better choice (the lower speed may actually be desirable from an ease-of-implementation perspective).
 
-> [!todo] Schematic Note
-> - [ ] Have an extra DNF parallel resistor for $R_\text{IREF}$ in case I want to increase the current limit (ie have higher brightnesses)—by lowering the $I_\text{OLCMax}$, I get finer brightness control over each channel
-> 
-> > [!question]
-> >  Ideally I would start on the maximum current limit, and optionally drop it down—this would require me to be able to increase $R_\text{IREF}$ though (NF parallel resistor and desolder?)
-
 - These selections give me the following matrix layout:
 	 ![7-7-7-7-7 by 21 with parts](images/7-7-7-7-7-by-21-parts.png)
 
