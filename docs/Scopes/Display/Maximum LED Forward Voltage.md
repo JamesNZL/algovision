@@ -11,7 +11,7 @@ The maximum forward voltage of my selected [[RS-1515MBAM]] LEDs is $3.4\,\text{V
 Consequently, I have the inequality
 $$
 \begin{align}
-V_\text{LED} & > 3.4 + 0.4 \\[0.5em]
+V_\text{LED} & > 3.4 + 0.4 \\[0.75em]
 & > 3.8\,\text{V}
 \end{align}
 $$

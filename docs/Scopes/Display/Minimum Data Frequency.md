@@ -8,8 +8,8 @@
 For a display refresh frequency of $f_{\text{refresh}} \geq 60\,\text{Hz}$, I must scan through all $21$ rows $60$ times a second. This gives me a minimum row frequency of
 $$
 \begin{align}
-f_\text{row refresh} & \geq f_\text{refresh}\times n_\text{rows} \\[0.5em]
-& \geq 60\times 21 \\[0.5em]
+f_\text{row refresh} & \geq f_\text{refresh}\times n_\text{rows} \\[0.75em]
+& \geq 60\times 21 \\[0.75em]
 & \geq 1260\,\text{Hz}
 \end{align}
 $$
@@ -88,8 +88,8 @@ t_\text{greyscale} & \lt \frac{t_\text{row}}{256} \\[0.75em]
 & \lt \frac{\frac{1}{f_\text{refresh}\times n_\text{row}}}{256} \\[0.75em]
 & \lt \frac{1}{256\times f_\text{refresh} \times n_\text{row}} \\[0.75em]
 f_\text{greyscale} & \geq \frac{1}{t_\text{greyscale}} \\[1em]
-& \geq 256 \times f_\text{refresh} \times n_\text{row} \\[0.5em]
-& \geq 256\times 60\times 21 \\[0.5em]
+& \geq 256 \times f_\text{refresh} \times n_\text{row} \\[0.75em]
+& \geq 256\times 60\times 21 \\[0.75em]
 & \geq 322.56\,\text{kHz}
 \end{align}
 $$
