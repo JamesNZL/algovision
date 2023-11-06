@@ -34,7 +34,7 @@ t_\text{row setup} & \lt \frac{t_\text{row}}{10} \\[0.75em]
 \end{align}
 $$
 
-This tells us that all serial data to configure each row before it can be displayed must be completed in less than $80\,\micro\text{s}$. Consulting the datasheet for the `TLC5951`, we see in the timing diagram below that, for five drivers, it takes
+This tells us that all serial data to configure each row before it can be displayed must be completed in less than $80\,\micro\text{s}$. Consulting the datasheet for the [[TLC5951DAP]], we see in the timing diagram below that, for five drivers, it takes
 $$
 \begin{align}
 t_{\text{row setup}} & = \left(\left(288\times n_\text{drivers}\right)\times \frac{1}{f_\text{clk}}\right) + T_\text{SU3} + t_\text{D6} \\[0.75em]
@@ -54,7 +54,7 @@ f_\text{clk} & \gt \frac{1440}{\frac{1}{10 \times f_\text{refresh} \times n_\tex
 \end{align}
 $$
 
-This tells me that, in order to achieve a refresh rate of $f_\text{refresh} \geq 60\,\text{Hz}$ with my $1:21$ scan rate, I will need a `GSSCK` data frequency of at least $18.200\,\text{MHz}$. This is encouraging, as the selected `TLC5951` driver supports up to $30\,\text{MHz}$, affording me roughly a factor of $2$ within which to find an optimal balance between refresh rate/visual flicker and signal integrity/computational demand.
+This tells me that, in order to achieve a refresh rate of $f_\text{refresh} \geq 60\,\text{Hz}$ with my $1:21$ scan rate, I will need a `GSSCK` data frequency of at least $18.200\,\text{MHz}$. This is encouraging, as the selected [[TLC5951DAP]] driver supports up to $30\,\text{MHz}$, affording me roughly a factor of $2$ within which to find an optimal balance between refresh rate/visual flicker and signal integrity/computational demand.
 
 Taking this maximum $30\,\text{MHz}$ data drive frequency to find the maximum achievable refresh rate $f_\text{refresh}$, we find
 $$

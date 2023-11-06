@@ -6,4 +6,6 @@
 
 | Purpose | Part Number     |
 | ------- | --------------- |
-| LEDs    | [[RS-1515MBAM]] | 
+| LED    | [[RS-1515MBAM]] | 
+| Shift Register | [[SN74HCS594PWR]] |
+| LED Driver | [[TLC5951DAP]] |

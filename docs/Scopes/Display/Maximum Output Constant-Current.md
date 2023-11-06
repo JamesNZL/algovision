@@ -19,7 +19,7 @@ I_\text{OLCMax} = 20\,\text{mA}
 \end{equation}
 $$
 
-As per the [`TLC5951`](https://www.ti.com/lit/gpn/tlc5951) datasheet, this requires an external resistor given by
+As per the [[TLC5951DAP]] datasheet, this requires an external resistor given by
 $$
 \begin{align}
 R_\text{IREF} & = \frac{V_\text{IREF}}{I_\text{OLCMax}} \times 40 \\[0.75em]
