@@ -8,7 +8,7 @@
 
 I know that the maximum output constant-current per channel will be when that channel is full brightness, ie the [[uniformity]] dot correction bits are set to maximum, as well as the [[pixel brightness]] greyscale bits are set to maximum.
 
-My selected `RS-1515MBAM` LEDs can sink an absolute maximum of $20\,\text{mA}$ forward current on the red channel, and $15\,\text{mA}$ on each of the green and blue channels.
+My selected [[RS-1515MBAM]] LEDs can sink an absolute maximum of $20\,\text{mA}$ forward current on the red channel, and $15\,\text{mA}$ on each of the green and blue channels.
 
 I will not consider the maximum forward current of alternative LED packages here, as it will be trivial to change a single $R_\text{IREF}$ resistor in the event that I need to change 735 LEDs.
 
