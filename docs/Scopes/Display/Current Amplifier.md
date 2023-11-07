@@ -116,3 +116,5 @@ which should be no issue at all.
 ![[Pasted image 20231107200323.png]]
 
 This is also verified by the simulation.
+
+I will move forward with this design, and do a parts selection for a suitable [[P-Channel MOSFETs|P-Channel MOSFET]], before verifying the final circuit in [[LTspice]].
