@@ -82,11 +82,24 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JOHNJIVJ
 
-[Parameter1]
-Name=
-Value=
+[Document3]
+DocumentPath=Display.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JAKAKGBN
 
-[Parameter2]
+[Parameter1]
 Name=ProjectRevision
 Value=v0.0.0
 
@@ -827,6 +840,12 @@ Type127=1
 Type128=1
 Type129=1
 Type130=1
+Type131=1
+Type132=1
+Type133=1
+Type134=1
+Type135=1
+Type136=1
 
 [Difference Levels]
 Type1=1
@@ -1024,6 +1043,7 @@ Type116=2
 Type117=3
 Type118=3
 Type119=3
+MultiChannelAlternate=0
 AlternateItemFail=3
 Type122=2
 Type123=1
