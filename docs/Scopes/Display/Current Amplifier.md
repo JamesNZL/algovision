@@ -39,7 +39,7 @@ I will evaluate both a BJT-based topology and a FET-based topology, but I suspec
 
 ### Transistor Type
 
-As my shift registers are being used to supply the common-anode supply of my [[RS-1515MBAM]] LEDs, I am effectively designing a high-side switch between $V_\text{LED}$ and the [[LED Drivers]]. This means that, unless I want to include a bootstrapping stage, I will be looking at PNP transistors and P-channel MOSFETs, else the $V_\text{shift}$ base/gate voltage will not be sufficiently greater than the emitter/source voltage to turn the transistor on.
+As my shift registers are being used to supply the common-anode supply of my [[RS-1515MBAM]] LEDs, I am effectively designing a high-side switch between $V_\text{LED}$ and the [[LED Drivers]]. This means that, unless I want to include a bootstrapping stage, I will be looking at PNP transistors and P-channel MOSFETs, else the $V_\text{shift}$ base/gate voltage may not be sufficiently greater than the emitter/source voltage to turn the transistor on.
 
 This produces a basic high-side PNP topology like the following:
 ![[Pasted image 20231107152804.png]]
@@ -54,6 +54,25 @@ I also have two active low control signals $\overline{V_\text{shift}}$ and $\ove
 | `1`                         | `0`                          | `0`          |
 | `1`                         | `1`                          | `0`          |
 
-### PNP Amplifier Topology
+### PNP Common Emitter Topology
 
+First, I will try a simple PNP common-emitter topology, as in the basic high-side topology sketched above. I will simulate this circuit in [[LTspice]].
 
+#### Shift Register Output Current
+
+![[Pasted image 20231107191111.png]]
+
+As expected, we see a constant base current being sunk into the shift register when the signal is active, with a magnitude of $4.0\,\text{mA}$—well within specifications.
+
+#### LED Current
+
+![[Pasted image 20231107191040.png]]
+![[Pasted image 20231107191345.png]]
+
+We see that this topology is behaving as expected; sinking current through the LED when both the shift register and driver are `LOW`, and cutting off current when the shift register signal goes `HIGH`.
+
+I am simulating with the `2SB1706` PNP transistor due to its $2\,\text{A}$ current rating and $\beta=463$ (in the SPICE model). We see that this is capable of passing close to the desired $1.575\,\text{A}$ for 105 channels, but is not quite capable of passing the full current.
+
+![[Pasted image 20231107191712.png]]
+
+Switching to the `2SB1708` with a gain $\beta=470.25$ and $I_\text{c} = 3\,\text{A}$, we see the full $1.575\,\text{A}$ alongside a better transient response. This tells me that this circuit should be adequate, but I do not like the high dependence on each transistor's current gain $\beta$. I could use a Darlington pair topology to increase the current gain of the circuit, but I will first try a PMOS topology.
