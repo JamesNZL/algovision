@@ -77,6 +77,12 @@ I am simulating with the `2SB1706` PNP transistor due to its $2\,\text{A}$ curre
 
 Switching to the `2SB1708` with a gain $\beta=470.25$ and $I_\text{c} = 3\,\text{A}$, we see the full $1.575\,\text{A}$ alongside a better transient response. This tells me that this circuit should be adequate, but I do not like the high dependence on each transistor's current gain $\beta$. I could use a Darlington pair topology to increase the current gain of the circuit, but I will first try a PMOS topology.
 
+![[Pasted image 20231107200714.png]]
+
+Looking at the power dissipated by the transistor, we see that it is dissipating over $3.6\,\text{W}$ peak, and an average of $1\,\text{W}$ when the row is on. This is undesirable from a PCB perspective, and also exceeds the absolute maximum power dissipation of the device ($0.5\,\text{W}$ from the [datasheet](https://fscdn.rohm.com/en/products/databook/datasheet/discrete/transistor/bipolar/2sb1708tl-e.pdf)).
+
+Although I could look at power transistors for better power dissipation, these will have much smaller DC gains.
+
 ### PMOS Common Source Topology
 
 Replacing the PNP BJT transistor with a P-channel MOSFET in a common-source configuration, I have the below circuit:
