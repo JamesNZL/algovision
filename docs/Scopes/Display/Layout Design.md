@@ -77,6 +77,5 @@ Having selected my [[Shift Registers]] and [[LED Drivers]] to produce the final 
   
 > [!todo]
 > - [x] Work out the minimum data frequency if I want a refresh rate of $\geq 60\,\text{Hz}$
-> - [ ] Work out the worst-case current if all LEDs in a row are at full brightness white—this cannot be sourced by the shift register, so I must design a current amplifier stage
+> - [x] Work out the worst-case current if all LEDs in a row are at full brightness white—this cannot be sourced by the shift register, so I must design a current amplifier stage
 > - [ ] Refer to the [`TLC5955`](https://www.digikey.co.nz/en/products/detail/texas-instruments/TLC5955DCAR/5181329) and [`TLC5947`](https://www.digikey.co.nz/en/products/detail/texas-instruments/TLC5947DAPR/2047743) datasheets for guidance on design procedure/power supply recommendations etc.
-
