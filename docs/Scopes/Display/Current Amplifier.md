@@ -76,3 +76,37 @@ I am simulating with the `2SB1706` PNP transistor due to its $2\,\text{A}$ curre
 ![[Pasted image 20231107191712.png]]
 
 Switching to the `2SB1708` with a gain $\beta=470.25$ and $I_\text{c} = 3\,\text{A}$, we see the full $1.575\,\text{A}$ alongside a better transient response. This tells me that this circuit should be adequate, but I do not like the high dependence on each transistor's current gain $\beta$. I could use a Darlington pair topology to increase the current gain of the circuit, but I will first try a PMOS topology.
+
+### PMOS Common Source Topology
+
+Replacing the PNP BJT transistor with a P-channel MOSFET in a common-source configuration, I have the below circuit:
+![[Pasted image 20231107194605.png]]
+
+#### Shift Register Output Current
+
+![[Pasted image 20231107194748.png]]
+
+As expected, we see a maximum current of $4.3\,\text{mA}$ to charge/discharge the gate of the FET, but zero current once the transistor is switched either on/off. This is desirable from a power dissipation perspective, as there is less current constantly being sunk/sourced by the shift registers, though I would expect the effect to be marginal due to the magnitude of the current.
+
+#### LED Current
+
+![[Pasted image 20231107195041.png]]
+![[Pasted image 20231107195121.png]]
+
+Once again, we see correct behaviour of this switch, with current passing when the shift register is pulled `LOW` and the driver load sinking current—and current ceasing to flow once the shift register is pulled `HIGH`. We do observe a slower off-transition in this case however, as the gate voltage takes a few microseconds to charge back up—but this effect is negligible.
+
+I am simulating with the `IRF7205` fast switching MOSFET due to its low on resistance of $70\,\text{m}\Omega$, its drain current $I_\text{D} = -4.6\,\text{A}$ being sufficient to pass my $1.575\,\text{A}$, and its logic-level gate threshold voltage.
+
+The low on resistance of this FET gives a power dissipation of
+$$
+\begin{align}
+P_\texttt{M1} & = I^2R \\[0.75em]
+& = 1.575^2 \times 0.07 \\[0.75em]
+& = 174\,\text{mW}
+\end{align}
+$$
+which should be no issue at all.
+
+![[Pasted image 20231107200323.png]]
+
+This is also verified by the simulation.
