@@ -118,3 +118,12 @@ which should be no issue at all.
 This is also verified by the simulation.
 
 I will move forward with this design, and do a parts selection for a suitable [[P-Channel MOSFETs|P-Channel MOSFET]], before verifying the final circuit in [[LTspice]].
+
+### Selected [[SIL2301-TP]] Device
+
+Simulating the selected [[SIL2301-TP]] device with an added gate-source pull-up resistor, I see exactly what I would expect to see.
+
+![[Pasted image 20231108013641.png]]
+![[Pasted image 20231108013752.png]]
+![[Pasted image 20231108013808.png]]
+![[Pasted image 20231108013834.png]]
