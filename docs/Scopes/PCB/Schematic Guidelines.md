@@ -18,6 +18,8 @@
 | Comment        | RS-1515MBAM                    |
 | Description    | PLCC4 SMT common anode RGB LED |
 
+- Use `~` for active `LOW` pins
+
 ### Parameters
 
 - Manufacturer

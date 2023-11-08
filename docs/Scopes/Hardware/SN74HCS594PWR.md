@@ -10,7 +10,7 @@
 | Part Number             | `SN74HCS594PWR`                                                                                                |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Image                   | ![`SN74HCS594PWR`](https://mm.digikey.com/Volume0/opasdata/d220001/medias/images/326/296;-4220204;-PW;-16.jpg) |
-| Supplier Link           | [DigiKey](https://www.digikey.com.au/en/products/detail/texas-instruments/SN74HCS594PWR/13532304)              |
+| Supplier Link           | [DigiKey](https://www.digikey.co.nz/en/products/detail/texas-instruments/SN74HCS594PWR/13532304)              |
 | Datasheet               | [Datasheet](https://www.ti.com/lit/ds/symlink/sn74hcs594.pdf)                                                  | 
 | Pins                    | 16                                                                                                             |
 | Package                 | `16-TSSOP`                                                                                                     |
