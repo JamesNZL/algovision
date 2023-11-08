@@ -4,6 +4,9 @@
 
 ## Display
 
+> [!summary] DigiKey List
+> View the full DigiKey list [here](https://www.digikey.co.nz/en/mylists/list/MLSM9W9TUP).
+
 | Purpose           | Part Number       |
 | ----------------- | ----------------- |
 | LED               | [[RS-1515MBAM]]   |
