@@ -16,6 +16,8 @@ I will need to consider, among other things:
 	2. Typical current draw;
 	3. Communication/driving protocol (data lines required, [[Scopes/Micro/Microcontroller]] peripherals needed); and
 	4. Cost.
+ 
+## Design Process
 
 First, I will begin by doing a [[Parts Selection]] by comparing different options, and selecting the device(s) that I think will be the most suitable.
 

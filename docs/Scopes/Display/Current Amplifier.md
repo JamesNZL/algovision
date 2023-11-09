@@ -127,3 +127,5 @@ Simulating the selected [[SIL2301-TP]] device with an added gate-source pull-up 
 ![[Pasted image 20231108013752.png]]
 ![[Pasted image 20231108013808.png]]
 ![[Pasted image 20231108013834.png]]
+
+I will now need to select the part numbers for my gate in-rush limiting and gate pull-up [[resistors]]. As these resistors are used in a low-power, low-precision application, their values/characteristics are not critical.
