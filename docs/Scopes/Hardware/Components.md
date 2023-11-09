@@ -11,9 +11,11 @@
 
 ## Display
 
-| Purpose           | Part Number       |
-| ----------------- | ----------------- |
-| LED               | [[RS-1515MBAM]]   |
-| Shift Register    | [[SN74HCS594PWR]] |
-| LED Driver        | [[TLC5951DAP]]    |
-| Current Amplifier | [[SIL2301-TP]]    |
+| Purpose                         | Part Number         | Quantity |
+| ------------------------------- | ------------------- | -------- |
+| LED                             | [[RS-1515MBAM]]     | 735      |
+| Shift Register                  | [[SN74HCS594PWR]]   | 3        |
+| LED Driver                      | [[TLC5951DAP]]      | 6        |
+| Current Amplifier               | [[SIL2301-TP]]      | 12       |
+| Amplifier Gate In-Rush Limiting | [[RC0402FR]] (1k)   | 21       |
+| Amplifier Gate Pull-Up          | [[RC0402FR]] (100k) | 21       | 
