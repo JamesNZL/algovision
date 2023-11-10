@@ -1,6 +1,6 @@
 ﻿[Design]
 Version=1.0
-HierarchyMode=0
+HierarchyMode=1
 ChannelRoomNamingStyle=2
 ReleasesFolder=
 ChannelDesignatorFormatString=$Component_$RoomName
@@ -50,12 +50,12 @@ PrefsRevisionGUID=
 
 [Document1]
 DocumentPath=Main_Board.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotationEnabled=0
+AnnotateStartValue=1000
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=0
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -67,12 +67,12 @@ DocumentUniqueId=JZZECZJL
 
 [Document2]
 DocumentPath=Power.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotationEnabled=0
+AnnotateStartValue=2000
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -84,12 +84,12 @@ DocumentUniqueId=JOHNJIVJ
 
 [Document3]
 DocumentPath=Matrix.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotationEnabled=0
+AnnotateStartValue=3000
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=2
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -102,11 +102,11 @@ DocumentUniqueId=CUOJHZKY
 [Document4]
 DocumentPath=Display.SchDoc
 AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
+AnnotateStartValue=4000
+AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=3
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -149,6 +149,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MCZTVEOB
+
+[Document7]
+DocumentPath=Main_Board.Annotation
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [Parameter1]
 Name=ProjectRevision
