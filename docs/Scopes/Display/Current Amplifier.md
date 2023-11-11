@@ -135,3 +135,5 @@ I will now need to select the part numbers for my gate in-rush limiting and gate
 ![[Pasted image 20231109180935.png]]
 
 I will also move the gate pull-up resistor to be on the shift register side, to reduce the pull-up effect when the signal is being driven `LOW`. I see that, without the pull-up resistor, the gate is pulled down to the `LOW`-level output of the shift register of $250\,\text{mV}$, but, the previous arrangement increased this to $300\,\text{mV}$. Moving the pull-up resistor, I see a better `LOW`-level input voltage of $252\,\text{mV}$.
+
+For BOM consolidation reasons, I will reuse the $10\,\text{k}\Omega$ pull-up resistor for the [[Shift Registers]], instead of the $100\,\text{k}\Omega$ resistor.
