@@ -8,6 +8,7 @@
 ## Passives Selection
 
 - [[Resistors]]
+- [[Capacitors]]
 
 ## Display
 
