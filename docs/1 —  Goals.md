@@ -19,7 +19,7 @@
 
 6. To learn about the [[USB]] protocol
 
-7. To learn more about another microcontroller—possibly the [[Scopes/Micro/ESP8266]]/[[Scopes/Micro/ESP32]], or maybe a [[Scopes/Micro/PSoC 6]]
+7. To learn more about another microcontroller—possibly the [[ESP8266]]/[[ESP32]], or maybe a [[PSoC 6]]
 
 8. To have something else that I can show off to demonstrate my knowledge and design ability
 

@@ -2,5 +2,5 @@
 
 # Microcontrollers and Programming
 
-- [[Scopes/Micro/Microcontroller]]
+- [[Microcontroller]]
 - [[USB]]

@@ -14,7 +14,7 @@
 I will need to consider, among other things:
 	1. Operating voltages;
 	2. Typical current draw;
-	3. Communication/driving protocol (data lines required, [[Scopes/Micro/Microcontroller]] peripherals needed); and
+	3. Communication/driving protocol (data lines required, [[Microcontroller|microcontroller]] peripherals needed); and
 	4. Cost.
  
 ## Design Process
