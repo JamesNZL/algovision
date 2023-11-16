@@ -2,4 +2,4 @@
 
 # Firmware
 
-- Watchdog timer
+- [[Watchdog Timer]]
