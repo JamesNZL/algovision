@@ -15,12 +15,12 @@ For my [[Display]], I must select a microcontroller that is capable of transferr
 | Purpose                    | Pins Required | Remarks                                                                                                  |
 | -------------------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
 | [[Display]] row control    | 3             | Shift register clear, clock, serial input                                                                |
-| [[Display]] column control | 10            | LED driver `GSSIN`, `DCSIN`, `GSCLK`, `GSLAT`, `DCSCK`, `~XBLNK`, `GSCKG`, `GSCKR`, `GSCKB`, flags input |
+| [[Display]] column control | 8            | LED driver `GSSIN`, `DCSIN`, `GSSCK`, `GSLAT`, `DCSCK`, `~XBLNK`, `GSCK`, flags input |
 | [[Debug LEDs]]             | 4+            | Heartbeat LED, status, `TX`, `RX`—assuming a single GPIO per LED                                         |
 | [[User Pushbuttons]]       | 1+            |                                                                                                          |
 | [[Brightness Control]]     | 1+            |                                                                                                          |
 
-This gives a total minimum of 19 available GPIO pins.
+This gives a total minimum of 17 available GPIO pins.
 
 ### ADC
 
