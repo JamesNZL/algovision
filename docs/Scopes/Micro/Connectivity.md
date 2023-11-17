@@ -9,4 +9,5 @@ I want to learn more about the various wireless/connectivity protocols/options a
 - [[Bluetooth]]
 - [[IEEE 802.11]]
 - [[IEEE 802.15.4]]
+- [[LoRa]]
 - [[Application Layers]]
