@@ -3,3 +3,7 @@
 # Firmware
 
 - [[Watchdog Timer]]
+
+## Display
+
+- [[Frame Buffers]]
