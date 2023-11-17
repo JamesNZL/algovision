@@ -28,9 +28,6 @@
 	- Would also produce a worse colour output as there is no constant current drive circuity; each RGB data input would require its own current limiting protection resistor, etc
 	- Could use an LED driver IC to resolve most of those problems, but DigiKey only stocks ICs with up to 48 outputs—this would correspond to only 16 RGB LEDs per driver, requiring *lots* of drivers for a full matrix—accounting for GPIO pins/routing paths (not to mention cost), this is still not very practicable
 
-> [!todo]
-> Actually work through the timing requirements to determine the necessary control frequency
-
 > [!question]
 > I'm actually not convinced by this... people have built $8\times 8\times 8 = 512$ RGB LED cubes with non-addressable LEDs, so it must be possible and realistic
 
