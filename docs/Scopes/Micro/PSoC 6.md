@@ -2,7 +2,7 @@
 
 # PSoC 6
 
-## Reference
+## References
 
 - [32-bit PSoC™ 6 Arm® Cortex®-M4 / M0+ | Microcontrollers Purpose-Built for the IoT - Infineon Technologies](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-6-32-bit-arm-cortex-m4-mcu/)
 - [Infineon-PSoC_6_MCU_The_New_Standard_for_the_Internet_of_Things-ProductBrochure-v05_00-EN.pdf](https://www.infineon.com/dgdl/Infineon-PSoC_6_MCU_The_New_Standard_for_the_Internet_of_Things-ProductBrochure-v05_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0f64f95450c7)
@@ -31,6 +31,8 @@
 - $512\,\text{kiB}$ to $2048\,\text{kiB}$ flash
 - $128\,\text{kiB}$ to $512\,\text{kiB}$ SRAM, expandable with QSPI
 
+- $0.9\,\text{V}$ or $1.1\,\text{V}$ core voltage
+- $1.7\to3.6\,\text{V}$ $V_\text{DDD}$ supply
 - 1x 12-bit SAR ADC at $1\,\text{MSa/sec}$
 - Up to 104 GPIO (84 on the `PSoC 63` with BLE)
 

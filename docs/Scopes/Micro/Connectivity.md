@@ -6,16 +6,7 @@
 
 I want to learn more about the various wireless/connectivity protocols/options available.
 
-## Bluetooth
-
-- [[Bluetooth Low Energy]]
-- [[Bluetooth Mesh]]
-
-## IEEE 802.15.4
-
-- [[Zigbee]]
-- [[Thread]]
-
-## Application Layers
-
-- [[Matter]]
+- [[Bluetooth]]
+- [[IEEE 802.11]]
+- [[IEEE 802.15.4]]
+- [[Application Layers]]
