@@ -4,6 +4,10 @@
 
 ## Peripherals
 
+### RAM
+
+To get a ball-park estimate, I will consider just my [[Frame Buffers]]—assuming that I have two rotating frame buffers for my [[Display]], this gives me a minimum of $8.7\,\text{kiB}$ of RAM required.
+
 ### GPIO
 
 For my [[Display]], I must select a microcontroller that is capable of transferring serial data at the required [[Minimum Data Frequency]] of at least $f_\text{clk} > 18.2\,\text{MHz}$.
