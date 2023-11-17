@@ -18,7 +18,17 @@ Regarding [[Connectivity|connectivity]], I think it would be nice to have Blueto
 
 Further, *preferably*, I would like if the microcontroller I choose did not require a vendor-specific IDE, but rather could be configured to work with [[PlatformIO]]. I already know that the [[ESP32]] and [[ESP8266]] are compatible with this workflow, but I will need to investigate further for other microcontroller families.
 
+---
 
+After considering the various families listed above, I have come to the conclusion as detailed within [[ESP8266#Conclusions]] and [[ESP32#Conclusions]] that I feel it would be best if I took this opportunity to gain a firmer grounding in an ARM-architecture microprocessor, and particularly something as common in industry as an [[STM32]].
+
+I also already have some experience with the ST system from my internship last year, such that I am already familiar with the STM32Cube family of software packages, and the experience of developing using ST support resources/application notes etc.
+
+As noted above, I still wish to incorporate WiFi and BLE into this project, so I will need to investigate whether something like the STM32W line is best, or perhaps another STM32 device family with an external module.
+
+I will start with familiarising myself further with the various [[ARM Cortex Processors]], and using the [ARM Cortex-M Processor Comparison Table](https://developer.arm.com/documentation/102787/latest) to determine the processor that is most suitable for my needs.
+
+I will then use the [STM32 MCU product selector](https://www.st.com/content/st_com/en/stm32-mcu-product-selector.html) to select a specific [[STM32]] microcontroller.
 
 > [!todo]
 > [Choosing the right Arm Cortex-M processor for your biomedical smart product: a practical guide - ASN Home (advsolned.com)](https://www.advsolned.com/choosing-the-right-arm-cortex-m-processor-for-your-biomedical-smart-product-a-practical-guide/)
