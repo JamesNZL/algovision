@@ -42,7 +42,7 @@ This gives a total minimum of 17 available GPIO pins.
 
 ### ADC
 
-For my [[Brightness Control]] knob.
+I will need one channel for my [[Brightness Control]] knob, and another channel for my [[Current Sensing]] signal.
 
 ### USB-UART
 

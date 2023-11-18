@@ -10,6 +10,7 @@
 - [[Buck Converter]]
 
 - [[USB Power Delivery]]
+- [[Current Sensing]]
 
 - [[Input Protection]]
 - [[Scopes/Power/Voltage Regulators]]
@@ -17,4 +18,3 @@
 - [[Scopes/Power/Power Indicator]]
 
 PD status LED
-PD current sensing
