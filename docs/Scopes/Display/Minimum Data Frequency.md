@@ -81,7 +81,7 @@ f_\text{clk} & \gt \frac{1440}{\frac{1}{2 \times f_\text{refresh} \times n_\text
 \end{align}
 $$
 
-For completeness, to find a reasonable minimum PWM greyscale frequency, I will make the assumption that I want at least an `8-bit` ($256$ counts) resolution to my PWM counter. This requires $256$ intervals over the period for which each row is on, ie
+For completeness, to find a reasonable minimum PWM [[Pixel Brightness]] greyscale frequency, I will make the assumption that I want at least an `8-bit` ($256$ counts) resolution to my PWM counter. This requires $256$ intervals over the period for which each row is on, ie
 $$
 \begin{align}
 t_\text{greyscale} & \lt \frac{t_\text{row}}{256} \\[0.75em]
@@ -95,3 +95,11 @@ f_\text{greyscale} & \geq \frac{1}{t_\text{greyscale}} \\[1em]
 $$
 
 This is again encouraging, and suggests to me that I am likely to be able to make use of the auto display repeat mode as I am likely to be driving the PWM greyscale clock at a significantly faster rate.
+
+For the full `12-bit` resolution on my greyscale control, I will need to fit at least $2^{12}=4096$ counts within each row-on period, giving
+$$
+\begin{align}
+f_\text{greyscale} & \geq 4096\times 60\times 21 \\[0.75em]
+& \geq 5.16\,\text{MHz}
+\end{align}
+$$
