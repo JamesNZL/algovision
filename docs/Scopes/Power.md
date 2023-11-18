@@ -4,6 +4,7 @@
 
 - [[Batteries]]
 - [[Battery Voltage Sensing]]
+- [[Load Switch]]
 - [[Auto-Shutdown]]
 
 - [[Boost Converter]]
