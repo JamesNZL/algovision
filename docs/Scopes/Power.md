@@ -3,13 +3,13 @@
 # Power
 
 - [[Batteries]]
-- [[Scopes/Power/Battery Voltage Sensing]]
-- [[Scopes/Power/Auto-Shutdown]]
+- [[Battery Voltage Sensing]]
+- [[Auto-Shutdown]]
 
 - [[Boost Converter]]
 - [[Buck Converter]]
 
-- [[USB Power Delivery]] could be the play
+- [[USB Power Delivery]]
 
 - [[Input Protection]]
 - [[Scopes/Power/Voltage Regulators]]
