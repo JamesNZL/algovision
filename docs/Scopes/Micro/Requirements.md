@@ -28,7 +28,7 @@ For my [[Brightness Control]] knob.
 
 ### USB-UART
 
-I would prefer to have a microcontroller that can be directly [[Programming|programmed]] with a [[Scopes/Micro/USB Connector|USB-C]] connection, without requiring an external [[Scopes/Micro/USB to Serial|USB-to-serial]] chip.
+I would prefer to have a microcontroller that can be directly [[Programming|programmed]] with a [[USB Type-C Connectors|USB-C]] connection, without requiring an external [[Scopes/Micro/USB to Serial|USB-to-serial]] chip.
 
 This will require further research to see whether this would still allow a debugger to be attached, though.
 
@@ -38,11 +38,7 @@ I will need at least one [[Watchdog Timer]].
 
 ### USB PD PHY
 
-It would be desirable to have in-built [[USB Power Delivery]] PHY support, such that I do not require an external PD controller IC.
-
-> [!todo]
-> - [power supply - Implementing USB-C PD PHY directly into micro-controller - Electrical Engineering Stack Exchange](https://electronics.stackexchange.com/questions/649227/implementing-usb-c-pd-phy-directly-into-micro-controller)
-> - [STM32 solutions for USB Type-C and Power Delivery - STMicroelectronics](https://www.st.com/content/st_com/en/ecosystems/stm32-usb-c.html?icmp=tt18626_gl_lnkon_nov2020)
+It would be desirable to have in-built [[USB Power Delivery]] [[USB Power Delivery Control Peripheral|PHY support]] (ie a UCPD), such that I do not require an external PD controller IC.
 
 ### Connectivity
 

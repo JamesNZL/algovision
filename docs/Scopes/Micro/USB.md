@@ -2,5 +2,5 @@
 
 # USB
 
-- [[Scopes/Micro/USB Connector]]
+- [[USB Type-C Connectors]]
 - [[Scopes/Micro/USB to Serial]]

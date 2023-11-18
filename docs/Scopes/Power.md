@@ -7,10 +7,11 @@
 - [[Scopes/Power/Auto-Shutdown]]
 
 - [[Boost Converter]]
+- [[Buck Converter]]
 
 - [[USB Power Delivery]] could be the play
 
-- [[Scopes/Power/Reverse Polarity Protection]]
+- [[Input Protection]]
 - [[Scopes/Power/Voltage Regulators]]
 
 - [[Scopes/Power/Power Indicator]]

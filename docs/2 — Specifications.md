@@ -17,7 +17,7 @@
 
 5. The outcome must be capable of an [[Auto-Shutdown|auto-sleep/shutdown]] if left unattended.
 
-6. The outcome must be easily programmed using a [[Scopes/Micro/USB Connector|USB Type C connector]].
+6. The outcome must be easily programmed using a [[USB Type-C Connectors|USB Type-C connector]].
 
 7. The outcome must be effective towards its goal of aiding in the visualisation of different [[sorting]] and [[pathfinding]]/[[search]] [[algorithms]].
 
