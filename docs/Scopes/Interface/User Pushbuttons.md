@@ -3,3 +3,5 @@
 # User Pushbuttons
 
 - [[Scopes/Interface/Reset Button]]
+
+Also see [[Operating Modes]]

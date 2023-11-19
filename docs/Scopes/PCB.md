@@ -8,7 +8,6 @@ https://github.com/JamesNZL/algovision/issues/10
 - [[Schematic Guidelines]]
 - [[Artwork Guidelines]]
 
-- Net ties
 - Should I make it a double stacked board? Mezzanine connectors?
 	[Search by Picture, You'll Know It When You See It | Samtec](https://www.samtec.com/picturesearch/)
 

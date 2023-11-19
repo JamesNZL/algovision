@@ -8,9 +8,10 @@
 ---
 
 - [[Assets]]
+- [[Hardware]]
 - [[PCB]]
 - [[Power]]
-- [[Interface]] and User Input 
+- [[Interface]]
 - [[Display]]
 - [[Microcontroller and Programming]]
 - [[Firmware]]
