@@ -38,4 +38,5 @@
 
 ## Footprints
 
-
+- Pin 1 marker of $0.2\,\text{mm}$ width, $0.1\,\text{mm}$ radius
+- Centred with pin & offset by nearest grid to $0.75\,\text{mm}$

@@ -12,9 +12,10 @@
  
 ## PCB
 
-- Create MCU library component
 - [[PCB Fabricators]]
 - Mezzanine connectors? [Mezzanine Products, Search by Picture | Samtec](https://www.samtec.com/picturesearch/high-speed-board-to-board/mezzanine)
+
+- Figure out component solder mask expansion rules
 
 ## Power
 
@@ -43,6 +44,11 @@
 - [[Scopes/Micro/USB to Serial]]
 - [[Programming]]
 - [[Connectivity]]
+
+- set up [[UCPD]]
+- use cubemx to configure pinout
+
+- Select an [external module](https://pcbartists.com/design/embedded/stm32-wifi-options/) for connectivity
 
 ## Firmware
 
