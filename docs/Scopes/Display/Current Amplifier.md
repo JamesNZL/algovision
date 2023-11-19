@@ -137,3 +137,17 @@ I will now need to select the part numbers for my gate in-rush limiting and gate
 I will also move the gate pull-up resistor to be on the shift register side, to reduce the pull-up effect when the signal is being driven `LOW`. I see that, without the pull-up resistor, the gate is pulled down to the `LOW`-level output of the shift register of $250\,\text{mV}$, but, the previous arrangement increased this to $300\,\text{mV}$. Moving the pull-up resistor, I see a better `LOW`-level input voltage of $252\,\text{mV}$.
 
 For BOM consolidation reasons, I will reuse the $10\,\text{k}\Omega$ pull-up resistor for the [[Shift Registers]], instead of the $100\,\text{k}\Omega$ resistor.
+
+---
+
+## Iteration Two
+
+> [!danger]
+> If the [[SN74HCS594PWR]] cannot output the $V_\text{OH}=0.95\times 5\,\text{V}$ that I have assumed in my simulation, it is unable to switch the LED off!
+> 
+> ![[Pasted image 20231119165015.png]]
+> 
+> *I did know that this was the problem with using a P-channel FET in this manner, I just hoped it would be fine...*
+> 
+> > [!todo]
+> > Design a more robust circuit (ie bootstrapping/gate drive) that eliminates this possibility.
