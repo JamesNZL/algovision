@@ -41,6 +41,11 @@
 
 ## Microcontroller and Programming
 
+- Microcontroller schematic design docs
+	- Decoupling
+	- Crystals
+	- Cube pinout
+
 - [[Scopes/Micro/USB to Serial]]
 - [[Programming]]
 - [[Connectivity]]
