@@ -21,6 +21,7 @@
 | Shift Register Decoupling       | [[CC0402KRX7R7]] (0u1) | 3        |
 | LED Driver                      | [[TLC5951DAP]]         | 5        |
 | LED Driver $R_\text{IREF}$      | [[RC0402FR]] (3k24)    | 5        |
+| LED Driver Decoupling           | [[CC0402KRX7R7]] (0u1) | 5        |
 | Current Amplifier               | [[SIL2301-TP]]         | 12       |
 | Amplifier Gate In-Rush Limiting | [[RC0402FR]] (1k)      | 21       |
 | Amplifier Gate Pull-Up          | [[RC0402FR]] (10k)     | 21       |
