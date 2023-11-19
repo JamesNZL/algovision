@@ -27,4 +27,6 @@ Having done my parts selection, I will move on to a [[Layout Design]] in [[Figma
 
 After choosing my [[Shift Registers]] and [[LED Drivers]] to drive my matrix, I will work through determining the [[Design Parameters]] that I will need to know in order to use the selected LED driver.
 
-The final task was to design a simple [[Current Amplifier]] stage for the common-anode input of each LED, as the shift register can only source $\approx 7\,\text{mA}$ per output.
+I also needed to design a simple [[Current Amplifier]] stage for the common-anode input of each LED, as the shift register can only source $\approx 7\,\text{mA}$ per output.
+
+Lastly, I needed to determine the necessary [[VLED Bypassing]] [[Capacitors]] to produce a 'well-regulated LED supply voltage ($V_\text{LED}$). 
