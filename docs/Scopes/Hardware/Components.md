@@ -25,3 +25,9 @@
 | Current Amplifier               | [[SIL2301-TP]]         | 12       |
 | Amplifier Gate In-Rush Limiting | [[RC0402FR]] (1k)      | 21       |
 | Amplifier Gate Pull-Up          | [[RC0402FR]] (10k)     | 21       |
+
+## Microcontroller
+
+| Purpose                     | Part Number         | Quantity |
+| --------------------------- | ------------------- | -------- |
+| Application Microcontroller | [[STM32U575CIT6Q]] | 1         |
