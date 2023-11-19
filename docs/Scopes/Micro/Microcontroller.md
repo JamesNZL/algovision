@@ -29,3 +29,6 @@ As noted above, I still wish to incorporate WiFi and BLE into this project, so I
 I will start with familiarising myself further with the various [[ARM Cortex Processors]], and using the [ARM Cortex-M Processor Comparison Table](https://developer.arm.com/documentation/102787/latest) to determine the processor that is most suitable for my needs.
 
 Having performed the above evaluation in [[ARM Cortex Processors#Cortex-M]] to learn that any Cortex-M core will be suitable, I will then use the [STM32 MCU product selector](https://www.st.com/content/st_com/en/stm32-mcu-product-selector.html) to select a specific [[STM32]] microcontroller that satisfies my other [[Requirements|requirements]].
+
+> [!success] Selected Device
+> Following a thorough selection process as documented in [[STM32#Product Selector]], I have decided to proceed with the [`STM32U575CIT6Q`](https://www.digikey.co.nz/en/products/detail/stmicroelectronics/STM32U575CIT6Q/18085454).

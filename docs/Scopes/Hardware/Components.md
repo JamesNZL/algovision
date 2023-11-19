@@ -9,6 +9,7 @@
 
 - [[Resistors]]
 - [[Capacitors]]
+- [[Crystals]]
 
 ## Display
 

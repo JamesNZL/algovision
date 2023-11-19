@@ -9,6 +9,7 @@
 
 - [[Boost Converter]]
 - [[Buck Converter]]
+- [[Low Dropout Regulator]]
 
 - [[USB Power Delivery]]
 - [[Current Sensing]]

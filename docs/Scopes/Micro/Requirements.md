@@ -18,11 +18,11 @@ I will need a timer for:
 As per my [[Minimum Data Frequency]] calculations, I must clock my shift registers at least at $1260\,\text{Hz}$, or a period of $0.8\,\text{ms}$. This will be easily achievable with a 8- or 16-bit timer with a clock prescaler applied to the system clock. I also calculated that my greyscale reference clock should be at least $5.16\,\text{MHz}$ for the full 12-bit resolution [[Pixel Brightness]] control.
 
 > [!todo]
-> Decide whether to drive the greyscale reference clock with an external crystal oscillator
+> Decide whether to drive the greyscale reference clock with an external [[Crystals|crystal]] oscillator
 
 ### SPI
 
-For my [[Display]], I must select a microcontroller that is capable of transferring serial data at the required [[Minimum Data Frequency]] of at least $f_\text{clk, SPI} > 18.2\,\text{MHz}$.
+For my [[Display]], I must select a microcontroller that is capable of transferring serial data to my [[LED Drivers]] at the required [[Minimum Data Frequency]] of at least $f_\text{clk, SPI} > 18.2\,\text{MHz}$.
 
 I note that this is separate from the microcontroller's operating frequency; as there is no inherent synchronisation between the [[Frame Buffers]] and the matrix timing constraints—as long as I can shift the data out from the read-only frame buffer in time with enough left-over instructions to slowly compute the contents of the write-only frame buffer, everything should be fine.
 
@@ -42,7 +42,7 @@ This gives a total minimum of 17 available GPIO pins.
 
 ### ADC
 
-I will need one channel for my [[Brightness Control]] knob, and another channel for my [[Current Sensing]] signal.
+At minimum, I will need one channel for my [[Brightness Control]] knob, and another channel for my [[Current Sensing]] signal.
 
 ### USB-UART
 
@@ -56,7 +56,7 @@ I will need at least one [[Watchdog Timer]]. Preferably, this will be a window w
 
 ### USB PD PHY
 
-It would be desirable to have in-built [[USB Power Delivery]] [[USB Power Delivery Control Peripheral|PHY support]] (ie a UCPD), such that I do not require an external PD controller IC.
+It would be desirable to have in-built [[USB Power Delivery]] [[USB-C Configuration Controller]] or [[USB Power Delivery Control Peripheral]], such that I do not require an external USB-C/PD controller IC.
 
 ### Connectivity
 
