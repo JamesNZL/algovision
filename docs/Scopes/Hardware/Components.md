@@ -28,6 +28,8 @@
 
 ## Microcontroller
 
-| Purpose                     | Part Number         | Quantity |
-| --------------------------- | ------------------- | -------- |
-| Application Microcontroller | [[STM32U575CIT6Q]] | 1         |
+| Purpose                                        | Part Number            | Quantity |     |
+| ---------------------------------------------- | ---------------------- | -------- | --- |
+| Application Microcontroller                    | [[STM32U575CIT6Q]]     | 1        |     |
+| Microcontroller $V_\text{DD}$ Bulk Decoupling  | [[CC1206KKX7R8]] (10u) | 1        |     |
+| Microcontroller $V_\text{DDA}$ Bulk Decoupling | [[CC0603KRX7R7]] (1u)  | 1        |     |
