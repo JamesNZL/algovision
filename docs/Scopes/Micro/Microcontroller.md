@@ -50,13 +50,14 @@ I will then begin with adding my power decoupling capacitors, following the guid
 	- as the $V_\text{REF}$ reference voltage pin is not exposed on my package, I do not need to worry about its capacitors.
 - a $100\,\text{nF}$ capacitor at each $V_\text{DD11}$ pin.
 
-As I am not using the $V_\text{BAT}$ backup domain functionality, I will treat this as another $V_\text{DD}$ pin.
+As I am not using the $V_\text{BAT}$ backup domain functionality, I will treat this as another $V_\text{DD}$ pin and attach its own $100\,\text{nF}$ decoupling capacitor as directed in `AN5373` para `2.1.4`.
 
-I will also apply some additional filtering to the $V_\text{DDA}$ analogue supply pin, **APPLICATION NOTE**
+I will also apply some additional filtering to the $V_\text{DDA}$ analogue supply pin, as suggested in Section `2.2` of `AN5373`. I will do this by adding a ferrite bead between $V_\text{DD}$ and $V_\text{DDA}$ to stop high-frequency switching transients from coupling through to my analogue domain. As I am not very familiar with ferrite beads, I will first use [[LTspice]] to characterise the behaviour of their equivalent model, then select an appropriate part. I will document this process in [[Ferrite Beads]].
 
 ### SMPS
 
-
+> [!info] Application Note `AN5373`
+> [Getting started with STM32U5 MCU hardware development](https://www.st.com/resource/en/application_note/an5373-getting-started-with-stm32u5-mcu-hardware-development-stmicroelectronics.pdf)
 
 ### Crystal Oscillators
 
@@ -72,6 +73,9 @@ I will also apply some additional filtering to the $V_\text{DDA}$ analogue suppl
 
 > [!info] Application Note `AN4879`
 > [Introduction to USB hardware and PCB guidelines using STM32 MCUs](https://www.st.com/resource/en/application_note/an4879-introduction-to-usb-hardware-and-pcb-guidelines-using-stm32-mcus-stmicroelectronics.pdf)
+
+> [!warning]
+> Filter the $V_\text{BUS}$ input rail with a ferrite!
 
 ### ESD and [[Input Protection]]
 
