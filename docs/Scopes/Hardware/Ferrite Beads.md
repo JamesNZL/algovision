@@ -158,11 +158,35 @@ Using [[MATLAB]] to plot the impedance response of my ferrite bead model with re
 
 ### Frequency Response
 
+#### Inductance
+
 ![[Pasted image 20231120171814.png]]
 
-I see that increasing the inductance will pull the 
+![[Pasted image 20231121014847.png]]
 
-> [!todo]
+I see that increasing the inductance will pull the crossover frequency lower, whilst decreasing it will push it higher.
+
+#### Capacitance
+
+![[Pasted image 20231121014944.png]]
+
+![[Pasted image 20231121014954.png]]
+
+I see identical behaviour when changing the capacitance; the crossover frequency is inversely proportional to the parasitic capacitance $C_\text{par}$.
+
+#### Resistance
+
+![[Pasted image 20231121015122.png]]
+
+![[Pasted image 20231121015132.png]]
+
+Finally, I see that the AC loss resistance $R_\text{AC}$ does not have an effect on the crossover frequency, but does affect the amount of attenuation within the rejection band. This is as I would expect, as I would expect the crossover frequency to be dependent only on the reactive elements—whilst $R_\text{AC}$ captures the impedance presented to signals within the reject-band—and consequently the voltage drop & power dissipated.
+
+![[Pasted image 20231121015443.png]]
+
+![[Pasted image 20231121015458.png]]
+
+Finally, I see a similar scaling behaviour when changing the series resistor $R_\text{s}$, but this is applied to the entire response, rather than just within the rejection band. This is again as I would expect, as this series resistor cannot be reduced by a parallel reactive element; it always contributes to the total impedance regardless of frequency.
 
 ## Implementation
 
