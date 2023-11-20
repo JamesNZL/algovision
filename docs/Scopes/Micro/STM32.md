@@ -263,7 +263,6 @@ Some more considerations are:
 
 - I have already used the `U575`/`U585` in my internship last year—perhaps it would be good to get experience with the `G474`?
 - The `U575` is newer and faster.
-- The `U575` has an internal SMPS that I can use for my [[Buck Converter]].
 - The `U575` is lower power—which is a project [[2 — Specifications|specification]].
 - Both the `U575` and `G474`'s TTL output ports have a logic `HIGH` $V_\text{OH}>2.4\,\text{V}$.
 	- This is insufficient for the maximum required positive switching threshold $V_\text{T+}=3.15\,\text{V}$ of the [[SN74HCS594PWR]] when powered off $5\,\text{V}$.
