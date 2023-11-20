@@ -57,7 +57,7 @@
 
 ## Firmware
 
-
+- Dot correction calibration in EEPROM
 
 ## Algorithms
 
