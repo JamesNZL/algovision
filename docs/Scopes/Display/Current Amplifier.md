@@ -151,3 +151,16 @@ For BOM consolidation reasons, I will reuse the $10\,\text{k}\Omega$ pull-up res
 > 
 > > [!todo]
 > > Design a more robust circuit (ie bootstrapping/gate drive) that eliminates this possibility.
+
+> [!question]
+> Why can't I just drive the GPIO as open-drain with a pull-up resistor?
+
+Also, *could* I run VLED on 3.3V? This is just risking the max Vf—it would be fine for the typical, but not the max VF.
+
+The [[SIL2301-TP]] has a max threshold voltage of 1V, so 3.3 will be more than sufficient, just that the Rdson will be slightly larger.
+
+Oh, the problem is only if I draw too much current from the shift register! If current is 0 (ie once the gate is charged), it is effectively VCC!
+
+- Shift register output is OK if powered by VLED
+- Shift register input can be driven as open-drain
+- VLED *should* be 5V
