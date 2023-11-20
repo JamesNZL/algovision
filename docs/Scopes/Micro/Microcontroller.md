@@ -41,6 +41,9 @@ Having selected my [[STM32U575CIT6Q]] microcontroller, I will now need to perfor
 
 ### Decoupling
 
+> [!info] Application Note `AN5373`
+> [Getting started with STM32U5 MCU hardware development](https://www.st.com/resource/en/application_note/an5373-getting-started-with-stm32u5-mcu-hardware-development-stmicroelectronics.pdf)
+
 I will then begin with adding my power decoupling capacitors, following the guidance provided in `Figure 25` of the [datasheet](https://www.st.com/resource/en/datasheet/stm32u575ag.pdf) to place:
 - a $100\,\text{nF}=0.1\,\micro\text{F}$ capacitor at each $V_\text{DD}$ pin, alongside a bulk $10\,\micro\text{F}$ capacitor for the IC.
 - a $100\,\text{nF}$ capacitor parallel to a bulk $1\,\micro\text{F}$ capacitor across $V_\text{DDA}$ for the analogue domain.
@@ -57,6 +60,24 @@ I will also apply some additional filtering to the $V_\text{DDA}$ analogue suppl
 
 ### Crystal Oscillators
 
+> [!info] Application Note `AN2867`
+> [Oscillator design guide for STM8AF/AL/S, STM32 MCUs and MPUs](https://www.st.com/resource/en/application_note/an2867-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf)
 
+### [[USB Power Delivery]]
+
+> [!info] Application Note `AN5225`
+> [Introduction to USB Type-C® Power Delivery for STM32 MCUs and MPUs](https://www.st.com/resource/en/application_note/an5225-introduction-to-usb-typec-power-delivery-for-stm32-mcus-and-mpus-stmicroelectronics.pdf)
+
+### USB [[Data Connector]]
+
+> [!info] Application Note `AN4879`
+> [Introduction to USB hardware and PCB guidelines using STM32 MCUs](https://www.st.com/resource/en/application_note/an4879-introduction-to-usb-hardware-and-pcb-guidelines-using-stm32-mcus-stmicroelectronics.pdf)
+
+### ESD and [[Input Protection]]
+
+> [!info] Application Note `AN5612`
+> [ESD protection of STM32 MCUs and MPUs](https://www.st.com/resource/en/application_note/an5612-esd-protection-of-stm32-mcus-and-mpus-stmicroelectronics.pdf)
 
 ### [[STM32CubeMX]] Pinout
+
+
