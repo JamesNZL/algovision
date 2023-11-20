@@ -2,6 +2,8 @@
 
 # Microcontroller
 
+## Selection
+
 To choose my microcontroller, I will first start by clearly defining the various [[Requirements|requirements]] that I must satisfy in order to drive my [[Display|display]] and control the various [[Interface|interface]] components.
 
 I know that I will want to consider at least the various ESP devices like the [[ESP32]] and [[ESP8266]], and also the [[PSoC 6]] after having used a PSoC 5 in [COMPSYS 301](https://docs.jamesnzl.xyz/compsys301-pathfinding-robot). I will also want to consider a few [[STM32]] microcontrollers, so I can become more familiar with these for industry.
@@ -32,3 +34,29 @@ Having performed the above evaluation in [[ARM Cortex Processors#Cortex-M]] to l
 
 > [!success] Selected Device
 > Following a thorough selection process as documented in [[STM32#Product Selector]], I have decided to proceed with the [`STM32U575CIT6Q`](https://www.digikey.co.nz/en/products/detail/stmicroelectronics/STM32U575CIT6Q/18085454).
+
+## Implementation
+
+Having selected my [[STM32U575CIT6Q]] microcontroller, I will now need to perform a schematic capture in [[Altium]]—starting by creating my own library component as per my [[Schematic Guidelines]].
+
+### Decoupling
+
+I will then begin with adding my power decoupling capacitors, following the guidance provided in `Figure 25` of the [datasheet](https://www.st.com/resource/en/datasheet/stm32u575ag.pdf) to place:
+- a $100\,\text{nF}=0.1\,\micro\text{F}$ capacitor at each $V_\text{DD}$ pin, alongside a bulk $10\,\micro\text{F}$ capacitor for the IC.
+- a $100\,\text{nF}$ capacitor parallel to a bulk $1\,\micro\text{F}$ capacitor across $V_\text{DDA}$ for the analogue domain.
+	- as the $V_\text{REF}$ reference voltage pin is not exposed on my package, I do not need to worry about its capacitors.
+- a $100\,\text{nF}$ capacitor at each $V_\text{DD11}$ pin.
+
+As I am not using the $V_\text{BAT}$ backup domain functionality, I will treat this as another $V_\text{DD}$ pin.
+
+I will also apply some additional filtering to the $V_\text{DDA}$ analogue supply pin, **APPLICATION NOTE**
+
+### SMPS
+
+
+
+### Crystal Oscillators
+
+
+
+### [[STM32CubeMX]] Pinout
