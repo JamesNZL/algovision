@@ -10,6 +10,7 @@
 - [[Resistors]]
 - [[Capacitors]]
 - [[Crystals]]
+- [[Ferrite Beads]]
 
 ## Display
 

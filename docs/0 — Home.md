@@ -19,11 +19,12 @@ A self-driven project to design an algorithm visualisation tool with a union of 
 | Package                            | Used for                                                         |
 | ---------------------------------- | ---------------------------------------------------------------- |
 | [[Obsidian]]                       | The scratch pad for documentation and design.                    |
-| [[Concepts]]                       | The rough sketches and ideation.                                 |
 | [[Visual Studio Code]]             | The text editing and firmware development.                       |
-| [[STM32CubeMX]]                    | The peripheral configuration and initialisation code generation. | 
+| [[STM32CubeMX]]                    | The peripheral configuration and initialisation code generation. |
 | [[LTspice]]                        | The hardware simulation and verification.                        |
 | [[Altium\|Altium Designer]]        | The schematic capture and PCB artwork.                           |
+| [[MATLAB]]                         | The electrical design analysis and verification.                 |
 | [[SOLIDWORKS]]                     | The 3D models of components.                                     |
+| [[Concepts]]                       | The rough sketches and ideation.                                 |
 | [[Figma]]                          | The iterative matrix mockups and topology design.                |
 | [[Illustrator\|Adobe Illustrator]] | The algovision logo.                                             |

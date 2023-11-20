@@ -12,9 +12,11 @@ I will begin by using [[LTspice]] to analyse an equivalent model.
 
 I see that the ferrite bead acts as type of band-reject filter, where it attenuates high-frequency signals until the reactance of the parallel capacitor dominates and begins to act as a short circuit.
 
-### Impedance
+### Impedance Transfer Function
 
-I will first derive the impedance of the equivalent model in the $s$ domain, to help myself visualise the frequency response of the ferrite bead.
+I will first derive the transfer function for the impedance of the equivalent model in the $s$ domain, to help myself visualise the frequency response of the ferrite bead.
+
+#### Analytical
 
 ![[Pasted image 20231120173120.png]]
 
@@ -92,8 +94,82 @@ Z &= \frac{  \Bigl(  \omega^4C_\text{par}^2L_\text{bead}^2R_\text{s}R_\text{AC}^
 \end{align}
 $$
 
+![[Pasted image 20231121012136.png]]
+
+![Figure 2 of Analog Dialogue 50-02](https://www.analog.com/-/media/images/analog-dialogue/en/volume-50/number-1/articles/ferrite-beads-demystified/ferrite-beads-fig02.png?imgver=2)
+
+Plotting the magnitude response in [Desmos](https://www.desmos.com/calculator/2eojibsjul), I see a plot that is very similar to `Figure 2` of [Analog Dialogue 50-02](https://www.analog.com/media/en/analog-dialogue/volume-50/number-1/articles/ferrite-beads-demystified.pdf), which is quite encouraging. I do see that although exact values are wrong (the $y$-axis value is off by many orders of magnitude), the general shape of the response is correct. Interestingly, if I reduce the order of the $-\omega^3$ term in the imaginary term to $-\omega^2$, the plot becomes *much* closer to the 'expected' value, as seen in the screenshot below.
+
+![[Pasted image 20231121012434.png]]
+
+I am not fully certain whether this is an algebraic error in my working, or what else it may be—but I do not think it is valuable to spend too much time on this topic.
+
+> [!summary]
+> I see in this plot (where the $x$-axis is frequency, in $\text{MHz}$) that the ferrite bead presents a very low impedance at low frequencies, whilst the inductive reactance dominates. As the frequency increases, I see a resonant peak where the $R_\text{AC}$ resistive component dominates, where the ferrite bead impedance increases significantly—which would lead to a larger voltage drop and power dissipated across the ferrite bead as heat energy. As the frequency continues to increase further however, the capacitive reactance dominates, such that the ferrite bead returns to presenting a low impedance.
+> 
+> Again, I see the band-reject characteristic of the ferrite bead.
+
+#### MATLAB
+
+```matlab
+%%% FerriteImpedance.m
+% A MATLAB script to model the impedance response of a ferrite bead.
+%
+% Author: James Bao
+
+%% Sanitise Workspace
+clear;
+close all;
+clc;
+
+fprintf("FerriteBead.m\n\n");
+
+%% Model Parameters
+
+% Series Resistance
+Rs = 0.3;
+
+% Parasitic Capacitance
+Cpar = 1.678e-12;
+
+% Bead Inductance
+Lbead = 1.208e-6;
+
+% AC Resistance
+Rac = 1.082e3;
+
+%% Transfer Function
+
+X_Cpar = tf(1, [Cpar 0]);
+X_Lbead = tf([Lbead 0], 1);
+
+Z = Rs + (1 / ((1/X_Cpar) + (1/X_Lbead) + (1/Rac)));
+
+%% Plot Frequency Response
+
+[mag, phase, w] = bode(Z, {0.1e6, 100e9});
+
+semilogx(w, squeeze(mag));
+```
+
+![[Pasted image 20231121011719.png]]
+
+Using [[MATLAB]] to plot the impedance response of my ferrite bead model with respect to frequency in order to validate my [[Ferrite Beads#Analytical|analytical]] working, I again see a plot that is very similar to that of the [Analog Dialogue 50-02](https://www.analog.com/media/en/analog-dialogue/volume-50/number-1/articles/ferrite-beads-demystified.pdf) article, and to my Desmos plots.
+
 ### Frequency Response
 
 ![[Pasted image 20231120171814.png]]
 
 I see that increasing the inductance will pull the 
+
+> [!todo]
+
+## Implementation
+
+### References
+
+- [Ferrite Beads Demystified | Analog Devices](https://www.analog.com/en/analog-dialogue/articles/ferrite-beads-demystified.html)
+- [How Do Ferrite Beads Work and How Do You Choose the Right One? | PCB Design Blog | Altium](https://resources.altium.com/p/how-do-ferrite-beads-work-and-how-do-you-choose-right-one)
+- [Everything You Need to Know About Ferrite Beads | Altium](https://resources.altium.com/p/everything-you-need-to-know-about-ferrite-beads)
+
+
