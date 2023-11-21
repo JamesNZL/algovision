@@ -215,7 +215,7 @@ Modelling a simple $LC$ filter network in [[LTspice]] with a somewhat arbitraril
 
 ![[Pasted image 20231121132933.png]]
 
-Adjusting the source to model some (very arbitrary) switching noise and performing a transient analysis, I see exactly that ringing at the output of my filter.
+Adjusting the source to model some (very arbitrary, and very exaggerated) switching noise and performing a transient analysis, I see exactly that ringing at the output of my filter.
 
 Simplifying the ferrite bead to be a pure inductor of reactance $sL$, I can derive the transfer function of the filter to be a simple impedance divider with gain
 $$
@@ -296,3 +296,43 @@ $$
 
 Simulating the response of this damped $RLC$ filter in [[LTspice]], I indeed see that the resonant peak has been eliminated, and the overshoot/ringing significantly attenuated. Great!
 
+I do however still see that the switching noise is still present—this tells me that the roll-off frequency of my filter is too high, and is not attenuating the frequencies of interest. I know that my arbitrary, artificial switching pulse has an on-time of $100\,\micro\text{s}$ with edges of $10\,\text{ns}$. I will first try to filter out the fundamental frequency of
+$$
+\begin{align}
+f_\text{fundamental} &= \frac{1}{2\times 100\,\micro\text{s}} \\[0.75em]
+& = 5\,\text{kHz}
+\end{align}
+$$
+
+I will therefore try to place my new roll-off frequency $f_\text{roll-off}'$ one decade lower than this, that is
+$$
+\begin{align}
+f_\text{roll-off}' = f_\text{resonance} & = \frac{\sqrt{\frac{1}{LC'}}}{2\pi} \\[0.75em]
+& =1\,\text{kHz} 
+\end{align}
+$$
+Assuming a fixed inductor value, I will derive an expression for the new capacitance $C'$ as
+$$
+\begin{align}
+C'&= \frac{1}{L\left(2\pi f_\text{roll-off}'\right)^2} \\[0.75em]
+& = 2.04\,\text{mF}
+\end{align}
+$$
+and a new damping resistor
+$$
+R'=109\,\text{m}\Omega
+$$
+
+Although these component values (ie $C'$) are not necessarily realistic (stemming from the arbitrary simulation setup), I am mostly interested in learning the process and developing an intuition around such resonant systems, and particularly the importance of damping elements—as I have not really had to deal with this before.
+
+![[Pasted image 20231121165913.png]]
+
+![[Pasted image 20231121170502.png]]
+
+I see that these new $C'$ and $R'$ values do indeed pull the roll-off frequency to the left, and lead to an *much* cleaner transient response.
+
+> [!summary]
+> From this exploration, I have learnt:
+> - The $LC$ filter formed with a ferrite bead and capacitor produces a low-pass characteristic
+> - Without sufficient damping, the filter can exhibit a resonant peak and cause significant ringing
+> - The cut-off frequency must be carefully chosen to actually attenuate the high-frequency noise of interest, where the cut-off frequency is dependent on the ferrite bead
