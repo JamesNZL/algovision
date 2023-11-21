@@ -9,6 +9,8 @@
 
 - [[Crystals]]
 	- Greyscale reference clock
+
+- Select [[Ferrite Beads]]
  
 ## PCB
 
@@ -18,6 +20,9 @@
 - Figure out component solder mask expansion rules
 
 DNF extra decoupling
+
+- Net colouring
+- Draftsman
 
 ## Power
 
