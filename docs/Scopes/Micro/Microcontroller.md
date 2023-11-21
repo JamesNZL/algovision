@@ -90,6 +90,43 @@ The $2.2\,\micro\text{H}$ inductor must be:
 > [!info] Application Note `AN2867`
 > [Oscillator design guide for STM8AF/AL/S, STM32 MCUs and MPUs](https://www.st.com/resource/en/application_note/an2867-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf)
 
+#### `LSE` Clock
+
+I already know that I must fit an `HSE` high-speed clock, but I am not certain whether I will need to fit a $32\,\text{kHz}$ low-speed `LSE` clock. I suspect that this may be useful if I can use it to drive a timer peripheral, as this will mean that I will not need a large prescaler on the `HSE` clock to drive my [[Minimum Data Frequency|row timing]], for example.
+
+![[Pasted image 20231121231756.png]]
+
+I see from the clock tree in the datasheet that the only timers connected to `LSE` are the low power timers, or to the regular timers through the main `HCLK` and `ABP1`/`ABP2` prescalers—with a maximum factor of $1/16$.
+
+Assuming that I want to drive my `HCLK` at its maximum $160\,\text{MHz}$, this gives me a minimum timer clock of
+$$
+\begin{align}
+f_\text{TIM, min} &= \frac{160\,\text{MHz}}{16}\times 2 \\[0.75em]
+&= 20\,\text{MHz}
+\end{align}
+$$
+The general purpose timers `TIM[2..5]` are 32-bit timers with any prescaler down to $1/(2^{16})$, giving me a minimum frequency of
+$$
+\begin{align}
+f_\text{min} &= \frac{20\,\text{MHz}}{(2^{16})\times (2^{32}-1)} \\[0.75em]
+& = 71.05\,\text{nHz}
+\end{align}
+$$
+
+The low power timers are 16-bit timers with a prescaler down to $1/128$, giving me a minimum frequency (with an `LSE`) of
+$$
+\begin{align}
+f_\text{min} &= \frac{32.768\,\text{kHz}}{128\times (2^{16}-1)} \\[0.75em]
+& = 3.906\,\text{mHz}
+\end{align}
+$$
+
+As it does not look like I will need the `LSE` to drive any of my timers, and I do not intend on using the $V_\text{BAT}$ backup domain, I will omit an `LSE` in this design.
+
+#### `HSE` Clock
+
+
+
 ### [[USB Power Delivery]]
 
 > [!info] Application Note `AN5225`
