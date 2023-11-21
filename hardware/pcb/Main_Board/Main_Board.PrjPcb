@@ -43,6 +43,7 @@ CrossRefPorts=3
 CrossRefCrossSheets=1
 CrossRefSheetEntries=0
 CrossRefFollowFromMainSettings=1
+CurrentVariant=Only Populated Components
 
 [Preferences]
 PrefsVaultGUID=
@@ -166,6 +167,15 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
+
+[ProjectVariant1]
+UniqueID=E385A381-8536-461C-A2D8-12F683060529
+Description=Only Populated Components
+AllowFabrication=0
+ParameterCount=0
+VariationCount=1
+Variation1=Designator=R1001|UniqueId=\SVLLIQON|Kind=1|AlternatePart= 
+ParamVariationCount=0
 
 [Parameter1]
 Name=ProjectRevision
@@ -1185,10 +1195,16 @@ NetClassManualEnabled=1
 NetClassSeparateForBusSections=0
 
 [LibraryUpdateOptions]
-SelectedOnly=0
+SelectedOnly=1
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+ComponentLibIdentifierKind0=Library Name And Type
+ComponentLibraryIdentifier0=algovision.SchLib
+ComponentDesignItemID0=STM32U575CIT6Q_SMT_48-LQFP
+ComponentSymbolReference0=STM32U575CIT6Q_SMT_48-LQFP
+ComponentUpdate0=1
+ComponentIsDeviceSheet0=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1202,6 +1218,39 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
+ParameterName0=Comment
+ParameterUpdate0=1
+ParameterName1=Component Kind
+ParameterUpdate1=1
+ParameterName2=ComponentLink1Description
+ParameterUpdate2=1
+ParameterName3=ComponentLink1URL
+ParameterUpdate3=1
+ParameterName4=ComponentLink2Description
+ParameterUpdate4=1
+ParameterName5=ComponentLink2URL
+ParameterUpdate5=1
+ParameterName6=Description
+ParameterUpdate6=1
+ParameterName7=Height (Max)
+ParameterUpdate7=1
+ParameterName8=Library Reference
+ParameterUpdate8=1
+ParameterName9=Manufacturer
+ParameterUpdate9=1
+ParameterName10=Manufacturer Part Number
+ParameterUpdate10=1
+ParameterName11=Package
+ParameterUpdate11=1
+ParameterName12=Supplier
+ParameterUpdate12=1
+ParameterName13=Supplier Part Number
+ParameterUpdate13=1
+ModelTypeGroup0=PCBLIB
+ModelTypeUpdate0=1
+ModelType0=PCBLIB
+ModelName0=STM32U575CIT6Q_SMT_48-LQFP
+ModelUpdate0=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0

@@ -30,7 +30,7 @@ $$
 where $V_\text{IREF}$ is the internal reference voltage on the `IREF` pin, typically $1.2\,\text{V}$.
 
 > [!todo] Schematic Note
-> - [ ] Have an extra DNF parallel resistor for $R_\text{IREF}$ in case I want to increase the current limit (ie have higher brightnesses)—by lowering the $I_\text{OLCMax}$, I get finer brightness control over each channel
+> - [ ] Have an extra DNP parallel resistor for $R_\text{IREF}$ in case I want to increase the current limit (ie have higher brightnesses)—by lowering the $I_\text{OLCMax}$, I get finer brightness control over each channel
 > 
 > > [!question]
 > >  Ideally I would start on the maximum current limit, and optionally drop it down—this would require me to be able to increase $R_\text{IREF}$ though (NF parallel resistor and desolder?)

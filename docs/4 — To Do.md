@@ -19,7 +19,7 @@
 
 - Figure out component solder mask expansion rules
 
-DNF extra decoupling
+- DNP extra decouplings
 
 - Net colouring
 - Draftsman

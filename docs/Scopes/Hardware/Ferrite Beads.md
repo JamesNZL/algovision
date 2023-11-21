@@ -336,7 +336,7 @@ I see that these new $C'$ and $R'$ values do indeed pull the roll-off frequency 
 
 ![[Pasted image 20231121191229.png]]
 
-I see that, if I choose to implement a ferrite bead in my design, I should make sure to fit a DNF zero-ohm jumper across the ferrite bead (and potentially the damping resistor, depending on its magnitude), in case I find that it actually negatively impacts the circuit. This will produce a simple first-order $RC$ low-pass filter with a reduced $-20\,\text{dB/dec}$ roll-off, but no risk of resonance.
+I see that, if I choose to implement a ferrite bead in my design, I should make sure to fit a DNP zero-ohm jumper across the ferrite bead (and potentially the damping resistor, depending on its magnitude), in case I find that it actually negatively impacts the circuit. This will produce a simple first-order $RC$ low-pass filter with a reduced $-20\,\text{dB/dec}$ roll-off, but no risk of resonance.
 
 ## Implementation
 
