@@ -194,18 +194,9 @@ Finally, I see that the AC loss resistance $R_\text{AC}$ does not have an effect
 
 Finally, I see a similar scaling behaviour when changing the series resistor $R_\text{s}$, but this is applied to the entire response, rather than just within the rejection band. This is again as I would expect, as this series resistor cannot be reduced by a parallel reactive element; it always contributes to the total impedance regardless of frequency.
 
-## Implementation
+### $LC$ Filter
 
-### References
-
-- [Ferrite Beads Demystified | Analog Devices](https://www.analog.com/en/analog-dialogue/articles/ferrite-beads-demystified.html)
-- [How Do Ferrite Beads Work and How Do You Choose the Right One? | PCB Design Blog | Altium](https://resources.altium.com/p/how-do-ferrite-beads-work-and-how-do-you-choose-right-one)
-- [Everything You Need to Know About Ferrite Beads | Altium](https://resources.altium.com/p/everything-you-need-to-know-about-ferrite-beads)
-
-> [!note]
-> A *great* video about using an $LC$ filter network on an analogue supply pin—[Shall We Use a Ferrite Bead in Power Rail or Not? | Explained by Eric Bogatin - YouTube](https://www.youtube.com/watch?v=HaLMjVkKYMw)
-
-### Design
+#### Undamped
 
 ![[Pasted image 20231121132001.png]]
 
@@ -248,6 +239,8 @@ f_\text{resonance} &= \frac{\sqrt{\frac{1}{LC}}}{2\pi}
 \end{align}
 $$
 Applying this to my model, I calculate a resonant frequency $f_\text{resonance}=43\,\text{kHz}$—which is very close to the observed resonant frequency in my simulations. I would indeed expect a slight deviation due to the inaccuracies of my idealised model.
+
+#### Damped
 
 I know from control theory that, in order to reduce the magnitude of the resonant peak in the frequency domain, I must increase the damping ratio $\zeta$. I can do this by inserting an additional resistive element to dissipate energy, which I will add in series with the inductor.
 
@@ -296,6 +289,8 @@ $$
 
 Simulating the response of this damped $RLC$ filter in [[LTspice]], I indeed see that the resonant peak and ringing has been eliminated, and the overshoot significantly reduced. Great!
 
+#### Cut-Off Frequency
+
 I do however still see that the switching noise is still present—this tells me that the roll-off frequency of my filter is too high, and is not attenuating the frequencies of interest. I know that my arbitrary, artificial switching pulse has an on-time of $100\,\micro\text{s}$ with edges of $10\,\text{ns}$. I will first try to filter out the fundamental frequency of
 $$
 \begin{align}
@@ -331,8 +326,26 @@ Although these component values (ie $C'$) are not necessarily realistic (stemmin
 
 I see that these new $C'$ and $R'$ values do indeed pull the roll-off frequency to the left, and lead to an *much* cleaner transient response.
 
+#### Conclusions
+
 > [!summary]
 > From this exploration, I have learnt:
 > - The $LC$ filter formed with a ferrite bead and capacitor produces a low-pass characteristic
 > - Without sufficient damping, the filter can exhibit a resonant peak and cause significant ringing
 > - The cut-off frequency must be carefully chosen to actually attenuate the high-frequency noise of interest, where the cut-off frequency is dependent on the ferrite bead
+
+![[Pasted image 20231121191229.png]]
+
+I see that, if I choose to implement a ferrite bead in my design, I should make sure to fit a DNF zero-ohm jumper across the ferrite bead (and potentially the damping resistor, depending on its magnitude), in case I find that it actually negatively impacts the circuit. This will produce a simple first-order $RC$ low-pass filter with a reduced $-20\,\text{dB/dec}$ roll-off, but no risk of resonance.
+
+## Implementation
+
+### References
+
+- [Ferrite Beads Demystified | Analog Devices](https://www.analog.com/en/analog-dialogue/articles/ferrite-beads-demystified.html)
+- [How Do Ferrite Beads Work and How Do You Choose the Right One? | PCB Design Blog | Altium](https://resources.altium.com/p/how-do-ferrite-beads-work-and-how-do-you-choose-right-one)
+- [Everything You Need to Know About Ferrite Beads | Altium](https://resources.altium.com/p/everything-you-need-to-know-about-ferrite-beads)
+
+> [!note]
+> A *great* video about using an $LC$ filter network on an analogue supply pin—[Shall We Use a Ferrite Bead in Power Rail or Not? | Explained by Eric Bogatin - YouTube](https://www.youtube.com/watch?v=HaLMjVkKYMw)
+
