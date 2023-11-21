@@ -17,7 +17,11 @@
 
 - Figure out component solder mask expansion rules
 
+DNF extra decoupling
+
 ## Power
+
+SPICE model to model my supply/power net and switching activity
 
 - [[Buck Converter]]
 - [[Low Dropout Regulator]]

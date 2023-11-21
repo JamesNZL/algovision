@@ -196,4 +196,62 @@ Finally, I see a similar scaling behaviour when changing the series resistor $R_
 - [How Do Ferrite Beads Work and How Do You Choose the Right One? | PCB Design Blog | Altium](https://resources.altium.com/p/how-do-ferrite-beads-work-and-how-do-you-choose-right-one)
 - [Everything You Need to Know About Ferrite Beads | Altium](https://resources.altium.com/p/everything-you-need-to-know-about-ferrite-beads)
 
+> [!note]
+> A *great* video about using an $LC$ filter network on an analogue supply pin—[Shall We Use a Ferrite Bead in Power Rail or Not? | Explained by Eric Bogatin - YouTube](https://www.youtube.com/watch?v=HaLMjVkKYMw)
 
+### Design
+
+![[Pasted image 20231121132001.png]]
+
+Modelling a simple $LC$ filter network in [[LTspice]] with a somewhat arbitrarily selected ferrite bead connected to my [[Microcontroller#Decoupling]] capacitors, I see a frequency response with a significant resonant peak at $\approx 50\,\text{kHz}$. This immediately tells me to expect a significant overshoot/ringing when looking at the time-domain step response of this filter, such as if there were to be some switching noise at the input.
+
+![[Pasted image 20231121131701.png]]
+
+![[Pasted image 20231121132933.png]]
+
+Adjusting the source to model some switching noise and performing a transient analysis, I see exactly that ringing at the output of my filter.
+
+Simplifying the ferrite bead to be a pure inductor of reactance $sL$, I can derive the transfer function of the filter to be a simple impedance divider with gain
+$$
+\begin{align}
+G=\frac{V_\text{o}}{V_\text{s}}&=\frac{\frac{1}{sC}}{\frac{1}{sC}+sL}\\[0.75em]
+&= \frac{1}{1+s^sLC}
+\end{align}
+$$
+
+Considering the general form of a second-order transfer function
+$$
+G(s)=\frac{\omega_\text{n}^2}{s^2+2\zeta\omega_\text{n}s+\omega_\text{n}^2}=\frac{1}{1+(\frac{2\zeta}{\omega_\text{n}})s+(\frac{1}{\omega_\text{n}^2})s^2}
+$$
+I immediately see that I have a system with a natural frequency $w_\text{n}$ where
+$$
+\omega_\text{n}=\sqrt{\frac{1}{LC}}
+$$
+and a damping ratio $\zeta$
+$$
+\zeta=0
+$$
+
+This tells me that this models an undamped system, which helps to explain why I see so much oscillation. Of course, I see that the real system is, in fact, damped, but I still see value in this idealised understanding. As explained in the Analog Dialogue article, this is because the resistive component $R_\text{AC}$ does not become significant until a certain frequency, below which the ferrite bead does indeed behave as an ideal inductor.
+
+I know from control theory that, in order to reduce the magnitude of the resonant peak in the frequency domain, I must increase the damping ratio $\zeta$. I can do this by inserting an additional resistive element to dissipate energy, which I will add in series with the capacitor.
+
+This gives me a new gain $G'$
+$$
+\begin{align}
+G'&=\frac{\frac{1}{sC}+R}{\left(\frac{1}{sC}+R\right)+sL} \\[0.75em]
+&=\frac{1+sCR}{1+sCR+s^2LC}
+\end{align}
+$$
+
+I see that I now have a damping ratio given by
+$$
+\begin{align}
+\frac{2\zeta}{\omega_\text{n}}&=CR\\[0.75em]
+\zeta &= \frac{CR\sqrt{\frac{1}{LC}}}{2}
+\end{align}
+$$
+such that
+$$
+\zeta \propto R
+$$
