@@ -215,7 +215,7 @@ Modelling a simple $LC$ filter network in [[LTspice]] with a somewhat arbitraril
 
 ![[Pasted image 20231121132933.png]]
 
-Adjusting the source to model some switching noise and performing a transient analysis, I see exactly that ringing at the output of my filter.
+Adjusting the source to model some (very arbitrary) switching noise and performing a transient analysis, I see exactly that ringing at the output of my filter.
 
 Simplifying the ferrite bead to be a pure inductor of reactance $sL$, I can derive the transfer function of the filter to be a simple impedance divider with gain
 $$
@@ -249,13 +249,13 @@ f_\text{resonance} &= \frac{\sqrt{\frac{1}{LC}}}{2\pi}
 $$
 Applying this to my model, I calculate a resonant frequency $f_\text{resonance}=43\,\text{kHz}$—which is very close to the observed resonant frequency in my simulations. I would indeed expect a slight deviation due to the inaccuracies of my idealised model.
 
-I know from control theory that, in order to reduce the magnitude of the resonant peak in the frequency domain, I must increase the damping ratio $\zeta$. I can do this by inserting an additional resistive element to dissipate energy, which I will add in series with the capacitor.
+I know from control theory that, in order to reduce the magnitude of the resonant peak in the frequency domain, I must increase the damping ratio $\zeta$. I can do this by inserting an additional resistive element to dissipate energy, which I will add in series with the inductor.
 
 This gives me a new gain $G'$
 $$
 \begin{align}
-G'&=\frac{\frac{1}{sC}+R}{\left(\frac{1}{sC}+R\right)+sL} \\[0.75em]
-&=\frac{1+sCR}{1+sCR+s^2LC}
+G'&=\frac{\frac{1}{sC}}{\frac{1}{sC}+\left(sL+R\right)} \\[0.75em]
+&=\frac{1}{1+s^2LC+sCR}
 \end{align}
 $$
 
@@ -270,3 +270,29 @@ such that
 $$
 \zeta \propto R
 $$
+
+Therefore, for my original circuit with parameters
+$$
+\begin{align}
+L &= 12.4\,\micro\text{H} \\[0.75em]
+C &= 1.1\,\micro\text{F} \\[0.75em]
+\end{align}
+$$
+and a desired damping ratio
+$$
+\zeta = 0.7
+$$
+I compute a necessary resistance
+$$
+\begin{align}
+R &= \frac{2\zeta}{C\sqrt{\frac{1}{LC}}} \\[0.75em]
+& = 4.7\,\Omega
+\end{align}
+$$
+
+![[Pasted image 20231121165057.png]]
+
+![[Pasted image 20231121165318.png]]
+
+Simulating the response of this damped $RLC$ filter in [[LTspice]], I indeed see that the resonant peak has been eliminated, and the overshoot/ringing significantly attenuated. Great!
+
