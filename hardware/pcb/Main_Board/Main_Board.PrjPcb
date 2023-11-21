@@ -49,26 +49,9 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=Micro.SchDoc
-AnnotationEnabled=0
-AnnotateStartValue=1000
-AnnotationIndexControlEnabled=1
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=0
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=JZZECZJL
-
-[Document2]
 DocumentPath=Power.SchDoc
-AnnotationEnabled=0
-AnnotateStartValue=2000
+AnnotationEnabled=1
+AnnotateStartValue=1000
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
 AnnotateScope=All
@@ -81,6 +64,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JOHNJIVJ
+
+[Document2]
+DocumentPath=Micro.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=2000
+AnnotationIndexControlEnabled=1
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=0
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JZZECZJL
 
 [Document3]
 DocumentPath=Matrix.SchDoc
@@ -101,7 +101,7 @@ DocumentUniqueId=CUOJHZKY
 
 [Document4]
 DocumentPath=Display.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=4000
 AnnotationIndexControlEnabled=1
 AnnotateSuffix=
