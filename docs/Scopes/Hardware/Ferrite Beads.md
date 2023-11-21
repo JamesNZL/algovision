@@ -94,13 +94,13 @@ Z &= \frac{  \Bigl(  \omega^4C_\text{par}^2L_\text{bead}^2R_\text{s}R_\text{AC}^
 \end{align}
 $$
 
-![[Pasted image 20231121012136.png]]
+![[Pasted image 20231121153742.png]]
 
 ![Figure 2 of Analog Dialogue 50-02](https://www.analog.com/-/media/images/analog-dialogue/en/volume-50/number-1/articles/ferrite-beads-demystified/ferrite-beads-fig02.png?imgver=2)
 
-Plotting the magnitude response in [Desmos](https://www.desmos.com/calculator/2eojibsjul), I see a plot that is very similar to `Figure 2` of [Analog Dialogue 50-02](https://www.analog.com/media/en/analog-dialogue/volume-50/number-1/articles/ferrite-beads-demystified.pdf), which is quite encouraging. I do see that although exact values are wrong (the $y$-axis value is off by many orders of magnitude), the general shape of the response is correct. Interestingly, if I reduce the order of the $-\omega^3$ term in the imaginary term to $-\omega^2$, the plot becomes *much* closer to the 'expected' value, as seen in the screenshot below.
+Plotting the magnitude response in [Desmos](https://www.desmos.com/calculator/2eojibsjul), I see a plot that is very similar to `Figure 2` of [Analog Dialogue 50-02](https://www.analog.com/media/en/analog-dialogue/volume-50/number-1/articles/ferrite-beads-demystified.pdf), which is quite encouraging. I do see that although exact values are wrong (the $y$-axis value is off by *many* orders of magnitude), the general shape of the response is correct. Interestingly, if I reduce the order of the $-\omega^3$ term in the imaginary term to $-\omega^2$, the plot becomes *much* closer to the 'expected' value, as seen in the screenshot below.
 
-![[Pasted image 20231121012434.png]]
+![[Pasted image 20231121153827.png]]
 
 I am not fully certain whether this is an algebraic error in my working, or what else it may be—but I do not think it is valuable to spend too much time on this topic.
 
@@ -149,12 +149,18 @@ Z = Rs + (1 / ((1/X_Cpar) + (1/X_Lbead) + (1/Rac)));
 
 [mag, phase, w] = bode(Z, {0.1e6, 100e9});
 
+w = w / (2 * pi * 1e6); % Convert w to f
+
 semilogx(w, squeeze(mag));
+
+xlabel('Frequency (MHz)', 'FontSize', 24);
+ylabel('Impedance (Ohms)', 'FontSize', 24);
+title('Impedance Response of Ferrite Bead Model', 'FontSize', 28);
 ```
 
-![[Pasted image 20231121011719.png]]
+![[Pasted image 20231121153407.png]]
 
-Using [[MATLAB]] to plot the impedance response of my ferrite bead model with respect to frequency in order to validate my [[Ferrite Beads#Analytical|analytical]] working, I again see a plot that is very similar to that of the [Analog Dialogue 50-02](https://www.analog.com/media/en/analog-dialogue/volume-50/number-1/articles/ferrite-beads-demystified.pdf) article, and to my Desmos plots.
+Using [[MATLAB]] to plot the impedance response of my ferrite bead model with respect to frequency in order to validate my [[Ferrite Beads#Analytical|analytical]] working, I see that I reproduce the exact plot seen in the [Analog Dialogue 50-02](https://www.analog.com/media/en/analog-dialogue/volume-50/number-1/articles/ferrite-beads-demystified.pdf) article, and very similar to my Desmos plots.
 
 ### Frequency Response
 
@@ -203,7 +209,7 @@ Finally, I see a similar scaling behaviour when changing the series resistor $R_
 
 ![[Pasted image 20231121132001.png]]
 
-Modelling a simple $LC$ filter network in [[LTspice]] with a somewhat arbitrarily selected ferrite bead connected to my [[Microcontroller#Decoupling]] capacitors, I see a frequency response with a significant resonant peak at $\approx 50\,\text{kHz}$. This immediately tells me to expect a significant overshoot/ringing when looking at the time-domain step response of this filter, such as if there were to be some switching noise at the input.
+Modelling a simple $LC$ filter network in [[LTspice]] with a somewhat arbitrarily selected ferrite bead connected to my [[Microcontroller#Decoupling]] capacitors, I see a frequency response with a significant resonant peak at $\approx 47\,\text{kHz}$. This immediately tells me to expect a significant overshoot/ringing when looking at the time-domain step response of this filter, such as if there were to be some switching noise at the input.
 
 ![[Pasted image 20231121131701.png]]
 
@@ -233,6 +239,15 @@ $$
 $$
 
 This tells me that this models an undamped system, which helps to explain why I see so much oscillation. Of course, I see that the real system is, in fact, damped, but I still see value in this idealised understanding. As explained in the Analog Dialogue article, this is because the resistive component $R_\text{AC}$ does not become significant until a certain frequency, below which the ferrite bead does indeed behave as an ideal inductor.
+
+This also tells me that the resonant frequency occurs at the natural frequency $\omega_\text{n}$, that is
+$$
+\begin{align}
+\omega &= 2\pi f \\[0.75em]
+f_\text{resonance} &= \frac{\sqrt{\frac{1}{LC}}}{2\pi}
+\end{align}
+$$
+Applying this to my model, I calculate a resonant frequency $f_\text{resonance}=43\,\text{kHz}$—which is very close to the observed resonant frequency in my simulations. I would indeed expect a slight deviation due to the inaccuracies of my idealised model.
 
 I know from control theory that, in order to reduce the magnitude of the resonant peak in the frequency domain, I must increase the damping ratio $\zeta$. I can do this by inserting an additional resistive element to dissipate energy, which I will add in series with the capacitor.
 

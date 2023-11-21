@@ -35,4 +35,10 @@ Z = Rs + (1 / ((1/X_Cpar) + (1/X_Lbead) + (1/Rac)));
 
 [mag, phase, w] = bode(Z, {0.1e6, 100e9});
 
+w = w / (2 * pi * 1e6); % Convert w to f
+
 semilogx(w, squeeze(mag));
+
+xlabel('Frequency (MHz)', 'FontSize', 24);
+ylabel('Impedance (Ohms)', 'FontSize', 24);
+title('Impedance Response of Ferrite Bead Model', 'FontSize', 28);
