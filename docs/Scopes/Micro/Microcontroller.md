@@ -54,10 +54,36 @@ As I am not using the $V_\text{BAT}$ backup domain functionality, I will treat t
 
 I will also apply some additional filtering to the $V_\text{DDA}$ analogue supply pin, as suggested in Section `2.2` of `AN5373`. I will do this by adding a ferrite bead between $V_\text{DD}$ and $V_\text{DDA}$ to stop high-frequency switching transients from coupling through to my analogue domain. As I am not very familiar with ferrite beads, I will first use [[LTspice]] to characterise the behaviour of their equivalent model, then select an appropriate part. I will document this process in [[Ferrite Beads]].
 
+> [!warning]
+> I still need to select a FB part / calculate the $CLC$ filters/damping—once I know more about the system characteristics
+
 ### SMPS
 
 > [!info] Application Note `AN5373`
 > [Getting started with STM32U5 MCU hardware development](https://www.st.com/resource/en/application_note/an5373-getting-started-with-stm32u5-mcu-hardware-development-stmicroelectronics.pdf)
+
+For the internal switched-mode power supply, I will place the components as specified in the datasheet/`AN5373` sect `2.2`, namely:
+- a $2.2\,\micro\text{H}$ ceramic coil between $V_\text{LXSMPS}$ and $V_\text{DD11}$.
+- two $2.2\,\micro\text{F}$ capacitors between $V_\text{DD11}$ and $V_\text{SSSMPS}$.
+- a $10\,\micro\text{F}$ capacitor between $V_\text{DDSMPS}$ and $V_\text{SSSMPS}$.
+
+> [!warning]
+> I still need to select these parts
+
+As per the datasheet, the external $2.2\,\micro\text{F}$ capacitors must be:
+- $\pm 20\%$ tolerance or better
+- $\text{ESR} < 20\,\text{m}\Omega$ at $3\,\text{MHz}$
+- $\geq 10\,\text{V}$ voltage rating
+
+The $10\,\micro\text{F}$ capacitor must be:
+- $\pm20\%$ tolerance or better
+- $\text{ESR} < 10\,\text{m}\Omega$ at $3\,\text{MHz}$
+- $\geq 10\,\text{V}$ voltage rating
+
+The $2.2\,\micro\text{H}$ inductor must be:
+- $\pm 20\%$ tolerance or better
+- $I_\text{SAT} > 0.5\,\text{A}$
+- $\text{DCR} < 200\,\text{m}\Omega$
 
 ### Crystal Oscillators
 
