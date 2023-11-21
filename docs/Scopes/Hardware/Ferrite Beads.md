@@ -290,11 +290,11 @@ R &= \frac{2\zeta}{C\sqrt{\frac{1}{LC}}} \\[0.75em]
 \end{align}
 $$
 
-![[Pasted image 20231121165057.png]]
+![[Pasted image 20231121174348.png]]
 
-![[Pasted image 20231121165318.png]]
+![[Pasted image 20231121174420.png]]
 
-Simulating the response of this damped $RLC$ filter in [[LTspice]], I indeed see that the resonant peak has been eliminated, and the overshoot/ringing significantly attenuated. Great!
+Simulating the response of this damped $RLC$ filter in [[LTspice]], I indeed see that the resonant peak and ringing has been eliminated, and the overshoot significantly reduced. Great!
 
 I do however still see that the switching noise is still present—this tells me that the roll-off frequency of my filter is too high, and is not attenuating the frequencies of interest. I know that my arbitrary, artificial switching pulse has an on-time of $100\,\micro\text{s}$ with edges of $10\,\text{ns}$. I will first try to filter out the fundamental frequency of
 $$
@@ -325,9 +325,9 @@ $$
 
 Although these component values (ie $C'$) are not necessarily realistic (stemming from the arbitrary simulation setup), I am mostly interested in learning the process and developing an intuition around such resonant systems, and particularly the importance of damping elements—as I have not really had to deal with this before.
 
-![[Pasted image 20231121165913.png]]
+![[Pasted image 20231121174703.png]]
 
-![[Pasted image 20231121170502.png]]
+![[Pasted image 20231121174609.png]]
 
 I see that these new $C'$ and $R'$ values do indeed pull the roll-off frequency to the left, and lead to an *much* cleaner transient response.
 
