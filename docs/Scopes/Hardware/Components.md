@@ -9,10 +9,16 @@
 
 - [[Resistors]]
 - [[Capacitors]]
-- [[Crystals]]
+- [[Oscillators]]
 - [[Ferrite Beads]]
 
 ## Display
+
+- [[Parts Selection]]
+	- [[Shift Registers]]
+	- [[LED Drivers]]
+	- [[Discrete Non-Addressable RGB LEDs]]
+- [[P-Channel MOSFETs]]
 
 | Purpose                         | Part Number            | Quantity |
 | ------------------------------- | ---------------------- | -------- |
@@ -28,6 +34,9 @@
 | Amplifier Gate Pull-Up          | [[RC0402FR]] (10k)     | 21       |
 
 ## Microcontroller
+
+- [[Microcontroller]]
+	- [[STM32]]
 
 | Purpose                                        | Part Number            | Quantity |     |
 | ---------------------------------------------- | ---------------------- | -------- | --- |

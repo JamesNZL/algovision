@@ -13,12 +13,10 @@ To get a ball-park estimate, I will consider just my [[Frame Buffers]]—assumin
 I will need a timer for:
 
 1. Row control [[Shift Registers]] timing
-2. Column control [[LED Drivers]] greyscale reference clock
+2. ~~Column control [[LED Drivers]] greyscale reference clock~~
+	> I will actually provide this with a dedicated [[Oscillators]] to reduce the workload of my [[Microcontroller]], and reduce the routing of high-speed signal traces.
 
-As per my [[Minimum Data Frequency]] calculations, I must clock my shift registers at least at $1260\,\text{Hz}$, or a period of $0.8\,\text{ms}$. This will be easily achievable with a 8- or 16-bit timer with a clock prescaler applied to the system clock. I also calculated that my greyscale reference clock should be at least $5.16\,\text{MHz}$ for the full 12-bit resolution [[Pixel Brightness]] control.
-
-> [!todo]
-> Decide whether to drive the greyscale reference clock with an external [[Crystals|crystal]] oscillator
+As per my [[Minimum Data Frequency]] calculations, I must clock my shift registers at least at $1260\,\text{Hz}$, or a period of $0.8\,\text{ms}$. This will be easily achievable with a 8- or 16-bit timer with a clock prescaler applied to the system clock.
 
 ### SPI
 

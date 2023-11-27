@@ -7,7 +7,7 @@
 
 ## Hardware
 
-- [[Crystals]]
+- [[Oscillators]]
 	- Greyscale reference clock
 
 - Select [[Ferrite Beads]]
@@ -25,6 +25,9 @@
 - Draftsman
 
 ## Power
+
+[bypassing.pdf (designers-guide.org)](https://designers-guide.org/design/bypassing.pdf)
+[szza009.pdf (ti.com)](https://www.ti.com/lit/an/szza009/szza009.pdf)
 
 SPICE model to model my supply/power net and switching activity
 

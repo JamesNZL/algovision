@@ -85,7 +85,7 @@ The $2.2\,\micro\text{H}$ inductor must be:
 - $I_\text{SAT} > 0.5\,\text{A}$
 - $\text{DCR} < 200\,\text{m}\Omega$
 
-### Crystal Oscillators
+### Clocks/Oscillators
 
 > [!info] Application Note `AN2867`
 > [Oscillator design guide for STM8AF/AL/S, STM32 MCUs and MPUs](https://www.st.com/resource/en/application_note/an2867-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf)
@@ -125,7 +125,18 @@ As it does not look like I will need the `LSE` to drive any of my timers, and I 
 
 #### `HSE` Clock
 
+Although I have found the [`AN2867`](https://www.st.com/resource/en/application_note/an2867-oscillator-design-guide-for-stm8afals-stm32-mcus-and-mpus-stmicroelectronics.pdf) application note to be an incredibly informative read, I believe that it is a better decision to employ an integrated external oscillator (in contrast with a crystal resonator and load capacitors, as per the application note) in this project.
 
+As per some of the considerations discussed in further detail in articles such as [this](https://www.sitime.com/company/news/blog/do-you-know-when-use-crystal-or-oscillator-wrong-answer-can-cost-you), I believe an oscillator is the better choice for a number of reasons, including:
+
+1. My low required quantities makes the cost different negligible.
+2. Oscillators are easier to design for, and I do want to save on development time where it makes sense (particularly niggly things like this, where I do not want to be sat in front of a scope on campus fine-tuning load capacitors during my summer break).
+
+As per `AN2867`, these oscillators are compatible with all [[STM32]] microcontrollers (expect the `F1` and `L1` series, but this is not relevant to me), and I should configure the STM32 embedded oscillator to be bypassed.
+
+As per the [datasheet](https://www.st.com/resource/en/datasheet/stm32u575ag.pdf), the `HSE` clock can be driven between $4\to 50\,\text{MHz}$. Reading some articles on the [ST Community Forums](https://community.st.com/t5/stm32-mcus-products/how-to-choose-crystal-speed/td-p/86531/page/2) and the [Electrical Engineering Stack Exchange](https://electronics.stackexchange.com/questions/613628/is-choosing-a-high-hse-frequency-beneficial-for-the-pll-cpu-clock) (and playing around in the [[STM32CubeMX]] clock configurator), I learn that the specific `HSE` input frequency is not critical; the PLL will be capable of producing a system clock $\approx 160\,\text{MHz}$ regardless of the actual input frequency.
+
+Consequently, I will select an appropriate oscillator by first considering other parameters such as cost, stock, temperature stability, accuracy, power consumption, and jitter. I will document this component selection in [[Oscillators]].
 
 ### [[USB Power Delivery]]
 
